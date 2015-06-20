@@ -21,11 +21,18 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: url('./img/backgr
 .youtube a:hover {background:url('./img/youtube_hover.png');}
 .linkedin a{background:url('./img/linkedin.png?v=02'); background-repeat:  no-repeat; width: 32px; height: 32px;}
 .linkedin a:hover{background:url('./img/linkedin_hover.png');}
+/* Bottom */
+.twitter-b a{background:url('./img/twitter-b.png?v=03'); background-repeat: no-repeat; width: 60px; height: 60px;}
+.facebook-b a{background:url('./img/facebook-b.png?v=01'); background-repeat:  no-repeat; width: 60px; height: 60px;}
+.linkedin-b a{background:url('./img/linkedin-b.png?v=01'); background-repeat:  no-repeat; width: 60px; height: 60px;}
+.instagram-b a{background:url('./img/instagram-b.png?v=01'); background-repeat:  no-repeat; width: 60px; height: 60px;}
+.youtube-b a{background:url('./img/youtube-b.png?v=01'); background-repeat:  no-repeat; width: 60px; height: 60px;}
+
 .social, .share, .user { z-index: 1; display: inline-block; padding: 0px;}
 .search {display: inline-block;position: relative;top: -18px;margin-left: 10px;}
 .search input{border-radius: 7px;  border: none;  padding: 7px;outline: none;}
-.social li, .share li, .user li {list-style-type: none; display: inline-block; }
-.social li  a, .share li a{display: inline-block;  cursor: pointer; transition: all 0.5s ease;}
+.social li, .share li, .user li, .social-bottom li {list-style-type: none; display: inline-block; }
+.social li  a, .share li a, .social-bottom li a{display: inline-block;  cursor: pointer; transition: all 0.5s ease; }
 .posiciones a{background:url('./img/posiciones.png?v=03'); background-repeat: no-repeat; width: 90px; height: 90px; display: inline-block; float: left;}
 .olimpismo a{background:url('./img/olimpismo.png?v=02'); background-repeat: no-repeat; width: 109px; height: 109px; display: inline-block; float: left;}
 .oficiales a{background:url('./img/oficiales.png?v=02'); background-repeat: no-repeat; width: 109px; height: 109px; display: inline-block; float: left;}
@@ -40,7 +47,7 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: url('./img/backgr
 .sq a { margin: 0px 5px; width: 90px; height: 90px;}
 .atletas{float: left;margin: 0px 20px;}
 nav{ text-align: right;}
-.actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); */padding: 5px;padding-right: 0px;}
+.actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); *//* padding: 5px; */padding-right: 0px;}
 .container{width: 100%; max-width: 1200px; margin: 0 auto;}
 .menu {width: 100%; max-width: 690px; float: right;}
 .menu li {display: inline-block; list-style-type: none;margin-bottom: 10px;}
@@ -51,33 +58,34 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .clear {clear: both;margin-bottom: 0px;}
 .user-icon{z-index:2;}
 .body { margin-top: 70px;}
-.videos { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 5px;}
+.noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 5px;}
 .twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 5px; }
 .noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 0px 20px 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 221px;position: relative;}
 .noticias h1 { color:#0B7DBF; font-style: italic;}
 .plus{text-align: right;margin: 0px;position: absolute;bottom: 20px;right: 20px;}
-.clear.margin {    margin-bottom: 30px;}
 .jugador{width: 420px;  margin-top: -30px;}
 .jug{position: absolute; right:0px; margin-top: 0px;z-index: -1;}
 .logo img{width: 250px;margin-top: 10px;}
-ul.social {
-    top: -5px;
-    position: relative;
-    margin-right: 30px;
+ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
+#search {  background: url("./img/search.png") no-repeat scroll 0 0 transparent;   color: #000000;  cursor: pointer;   height: 20px;   padding: 0px;   width: 20px;   color: transparent;   margin-left: 5px; }
+.banner{  padding: 25px 0px;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
+.redes span {color: white;  font-size: 22px; font-family:"SkolaRegular", Verdana, Tahoma}
+.redes {  text-align: center;  float: right;}
+.videos, .galeria {  width: 48%;  height: 300px;   background-color: red;   float: left;}
+.videos{ margin-right: 4%;}
+.row{ margin: 0px 0px 70px; clear: both;} 
+ul.social-bottom {    padding: 0px;}
+.social-bottom li {    margin: 0px 4px;}
+.map {color:white;/* background-color: rgba(11, 125, 191, 0.52); *//* padding: 6px 13px; */}
+.map ul li {list-style: none;}
+.map ul li a {text-decoration: none; color:white;}
+.r9 {
+    width: 10%;
+    float: left;
+    font-size: 13px;
+    /* font-weight: 400; */
 }
-#search {
-  background: url("./img/search.png") no-repeat scroll 0 0 transparent;
-  color: #000000;
-  cursor: pointer;
-  /* font-weight: bold; */
-  height: 20px;
-  padding: 0px;
-  width: 20px;
-  color: transparent;
-  margin-left: 5px;
+.r9 ul {
+    padding: 0px;
 }
-.banner{  padding: 25px 0px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.47);
-  border-radius: 10px;
-  color: rgb(11, 125, 191);}
+.r9 ul li { font-size: 11px;}
