@@ -1,0 +1,35 @@
+body{ background: rgb(243, 243, 243);}
+*{ font-family: Verdana, Tahoma; margin: 0; padding: 0;}
+.menu{width: 250px;background-color: #2AABE1;  position: fixed; height: 100%;border-right: 1px solid rgb(126, 126, 126); }
+.menu ul {margin-top: 20px;}
+.menu li { list-style-type: none;}
+.menu li a { display: inline-block; color: white; text-decoration: none; width: 230px; padding: 10px; ;}
+.menu li a:hover{background: rgb(105, 186, 221);}
+.menu li a.selected{ background: rgb(0, 131, 185);}
+.logo { margin-top: 0px; background-color: rgb(241, 241, 241); padding: 10px 0px;  text-align: center;}
+.admin {color:white; text-align: center; padding: 15px 0px;}
+.top-bar{width: 100%; background-color: black; padding: 8px 0px; color: white; text-align: right; font-size: 12px;margin-right: 0px;}
+.logout {color: rgb(242, 82, 79);margin-right: 10px;}
+.content {margin-left: 250px;padding: 30px;}
+.title {    font-size: 26px;}
+a.add { font-size: 13px;  background-color: #E0E0E0; text-decoration: none;
+    padding: 7px; color: rgb(0, 131, 185); display: inline-block; line-height: 16px;   border-radius: 2px;
+    border: 1px solid rgb(206, 206, 206);  margin-left: 10px;  transition: background 2s ;  -webkit-transition: all 0.5s;}
+a.add:hover{background: #0083B9; color: white;}
+fieldset {   border: none; }
+label{display: block;  width: 200px; vertical-align: top;}
+.add-content p {margin: 10px 0px;}
+.add-content textarea { padding: 5px; width: 290px;height: 200px; resize: none;}
+.add-content input {padding: 5px; width: 100%; box-sizing: border-box;}
+.add-content {margin-top: 20px;  border: 1px solid rgb(202, 202, 202);  border-radius: 5px;  padding: 10px;}
+.dropzone {
+  min-height: 150px;
+  border: none !important; background: none !important;
+  padding: 20px 20px;
+}
+.fireUI-table a {  color: rgb(0, 131, 185);}
+.fireUI-table img { width: 30px;}
+.center{ text-align: center;}
+.center a { color: rgb(0, 131, 185); text-decoration: none;}
+.center a:hover { text-decoration: underline;}
+.description {resize: none; height: 300px;width: 100%;}
