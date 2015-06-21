@@ -131,7 +131,11 @@
                  <div class="banner">Publicidad</div>
              </div>
              <div class="row">
-                 <div class="videos"></div>
+                 <div class="videos">
+                    <iframe id="ytplayer" type="text/html" width="576" height="324"
+src="https://www.youtube.com/embed/?listType=user_uploads&list=araymoisesramon&theme=light"
+frameborder="0" allowfullscreen></iframe>
+                 </div>
                  <div class="galeria"></div>
                  <div class="clear"></div>
              </div>
