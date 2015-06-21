@@ -1,9 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>Cómito Olímpico</title>
+    <link rel="stylesheet" href="css/slider.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jssor.slider.mini.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            var options = { 
+                $AutoPlay: true,
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,
+                    $ChanceToShow: 2,
+                    $SpacingX: 10,
+                    $SpacingY: 10,
+                    $AutoCenter: 1
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,
+                    $ChanceToShow: 2,
+                    $AutoCenter: 2                } 
+            };
+            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+        });
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -27,80 +49,103 @@
                         <input id="search" value="search"/>
                     </div>
                 </div>
-                <nav>
-                    <ul class="menu">
-                        <li><a href="">COV</a></li>
-                        <li><a href="">JJOO</a></li>
-                        <li><a href="">Ciclo Olímpico</a></li>
-                        <li><a href="">Disciplinas</a></li>
-                        <li><a href="">Atletas</a></li>
-                        <li><a href="">Federaciones</a></li>
-                        <li><a href="">Fotos</a></li>
-                        <li><a href="">Videos</a></li>
-                        <li><a href="">Noticias</a></li>
-                    </ul>
-                </nav>
-                <div class="logo">
-                    <img src="./img/logo.png"/>
-                </div>
-            </div> 
-            <div class="clear"></div>
-        </div>   
-        <div class="body">
-            <div class="container">
-                <div class="row">
-                    <div class="noticias-slider"></div>
-                    <div class="twitter-box"></div>
-                    <div class="actions">
-                         <div class="posiciones sq"><a href=""></a></div>
-                         <div class="olimpismo sq"><a href=""></a></div>
-                         <div class="oficiales sq"><a href=""></a></div>
-                         <div class="boletin"><a href=""></a></div>
-                         <div class="media"><a href=""></a></div>
-                         <div class="calendario"><a href=""></a></div>
-                         <div class="toronto"><a href=""></a></div>
-                         <div class="contacto"><a href=""></a></div>
-                         <div class="ubicanos"><a href=""></a></div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="">COV</a></li>
+                    <li><a href="">JJOO</a></li>
+                    <li><a href="">Ciclo Olímpico</a></li>
+                    <li><a href="">Disciplinas</a></li>
+                    <li><a href="">Atletas</a></li>
+                    <li><a href="">Federaciones</a></li>
+                    <li><a href="">Fotos</a></li>
+                    <li><a href="">Videos</a></li>
+                    <li><a href="">Noticias</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <img src="./img/logo.png"/>
+            </div>
+        </div> 
+        <div class="clear"></div>
+    </div>   
+    <div class="body">
+        <div class="container">
+            <div class="row">
+                <div id="slider1_container" class="noticias-slider" style="position: relative; top: 0px; left: 0px; width: 645px; height: 389px;">
+                    <!-- Slides Container -->
+                    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 645px; height: 389px;">
+                        <div><img u="image" src="image1.jpg" /></div>
+                        <div><img u="image" src="image2.jpg" /></div>
+                        <div><img u="image" src="image3.jpg" /></div>
+                        <div><img u="image" src="image4.jpg" /></div>
                     </div>
-                    <div class="clear"></div>
+                    <!-- Arrow Left -->
+                    <span u="arrowleft" class="jssora10l" style="top: 123px; left: 8px;">
+                    </span>
+                    <!-- Arrow Right -->
+                    <span u="arrowright" class="jssora10r" style="top: 123px; right: 8px;">
+                    </span>
+                    <!-- bullet navigator container -->
+                    <div u="navigator" class="jssorb01" style="bottom: 16px; right: 10px;">
+                        <!-- bullet navigator item prototype -->
+                        <div u="prototype"></div>
+                    </div>
                 </div>
-                 <div class="row">
-                       <div class="noticias">
-                            <h1>Noticias</h1>
-                            <p>Blah blah algun texto irá aquí sobre las noticias más importantes. bli bli
-                            blu blu. Blah blah algun texto irá aquí sobre las noticias.</p>
-                            <p class="plus"><img src='./img/plus.png'/></p>
-                     </div>
-                     <div class="atletas">
-                        <div class="toronto_atletas"><a href=""></a></div>
-                         <div class="punto_olimpico"><a href=""></a></div>
-                     </div>
-                     <div class="jug">
-                        <img src="./img/jugador.png" class="jugador"/>
-                     </div> 
-                 <div class="clear"></div>
-                 </div>
-                 <div class="row">
-                     <div class="banner">Publicidad</div>
-                 </div>
-                 <div class="row">
-                     <div class="videos"></div>
-                     <div class="galeria"></div>
-                     <div class="clear"></div>
-                 </div>
-                 <div class="row">
-                     <div class="redes">
-                        <span>Redes Sociales</span>
-                        <ul class="social-bottom">
-                            <li class="twitter-b"><a href=""></a></li>
-                            <li class="facebook-b"><a href=""></a></li>
-                            <li class="instagram-b"><a href=""></a></li>
-                            <li class="youtube-b"><a href=""></a></li>
-                            <li class="linkedin-b"><a href=""></a></li>
-                        </ul>
-                     </div>
-                     <div class="clear"></div>
-                 </div>
+                <div class="twitter-box">   
+                    <h1>Twitter <img src="./img/twitter_hover.png" alt="Twitter" style="vertical-align: middle;"/></h1>
+                    <a class="twitter-timeline" href="https://twitter.com/PuntoOlimpico" data-widget-id="612438112430653445">Tweets por el @PuntoOlimpico.</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                <div class="actions">
+                     <div class="posiciones sq"><a href=""></a></div>
+                     <div class="olimpismo sq"><a href=""></a></div>
+                     <div class="oficiales sq"><a href=""></a></div>
+                     <div class="boletin"><a href=""></a></div>
+                     <div class="media"><a href=""></a></div>
+                     <div class="calendario"><a href=""></a></div>
+                     <div class="toronto"><a href=""></a></div>
+                     <div class="contacto"><a href=""></a></div>
+                     <div class="ubicanos"><a href=""></a></div>
+                </div>
+                <div class="clear"></div>
+            </div> 
+            <div class="row">
+               <div class="noticias">
+                    <h1>Noticias</h1>
+                    <p>Blah blah algun texto irá aquí sobre las noticias más importantes. bli bli
+                    blu blu. Blah blah algun texto irá aquí sobre las noticias.</p>
+                    <p class="plus"><img src='./img/plus.png'/></p>
+             </div>
+             <div class="atletas">
+                <div class="toronto_atletas"><a href=""></a></div>
+                 <div class="punto_olimpico"><a href=""></a></div>
+             </div>
+             <div class="jug">
+                <img src="./img/jugador.png" class="jugador"/>
+             </div> 
+         <div class="clear"></div>
+         </div>
+         <div class="row">
+             <div class="banner">Publicidad</div>
+         </div>
+         <div class="row">
+             <div class="videos"></div>
+             <div class="galeria"></div>
+             <div class="clear"></div>
+         </div>
+         <div class="row">
+             <div class="redes">
+                <span>Redes Sociales</span>
+                <ul class="social-bottom">
+                    <li class="twitter-b"><a href=""></a></li>
+                    <li class="facebook-b"><a href=""></a></li>
+                    <li class="instagram-b"><a href=""></a></li>
+                    <li class="youtube-b"><a href=""></a></li>
+                    <li class="linkedin-b"><a href=""></a></li>
+                </ul>
+             </div>
+             <div class="clear"></div>
+         </div>
                   <div class="row">
                      <div class="map">
                         <div class="r9">
