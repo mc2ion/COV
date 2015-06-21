@@ -24,6 +24,10 @@
                     $AutoCenter: 2                } 
             };
             var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            
+            $("div[u='navigator']").children('div').each(function(i){
+                $(this).addClass("background"+i);
+            });
         });
     </script>
   </head>
@@ -74,10 +78,38 @@
                 <div id="slider1_container" class="noticias-slider" style="position: relative; top: 0px; left: 0px; width: 645px; height: 389px;">
                     <!-- Slides Container -->
                     <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 645px; height: 389px;">
-                        <div><span><h1>Toronto 2015</h1><h2>Juegos Panamericanos Toronto 2015</h2></span><img u="image" src="image1.jpg" /></div>
-                        <div><img u="image" src="image2.jpg" /></div>
-                        <div><img u="image" src="image3.jpg" /></div>
-                        <div><img u="image" src="image4.jpg" /></div>
+                        <div class="1">
+                            <span class="title">
+                                <h2>Toronto <span>2015</span></h2>
+                                <h3>Juegos Panamericanos Toronto 2015</h3>
+                            </span>
+                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
+                            <img u="image" src="image1.jpg" />
+                        </div>
+                        <div>
+                            <span class="title">
+                                <h2>Toronto <span>2015</span></h2>
+                                <h3>Juegos Panamericanos Toronto 2015</h3>
+                            </span>
+                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
+                            <img u="image" src="image2.jpg" />
+                        </div>
+                        <div>
+                            <span class="title">
+                                <h2>Toronto <span>2015</span></h2>
+                                <h3>Juegos Panamericanos Toronto 2015</h3>
+                            </span>
+                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
+                            <img u="image" src="image3.jpg" />
+                        </div>
+                        <div>
+                            <span class="title">
+                                <h2>Toronto <span>2015</span></h2>
+                                <h3>Juegos Panamericanos Toronto 2015</h3>
+                            </span>
+                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>`
+                            <img u="image" src="image4.jpg" />
+                        </div>
                     </div>
                     <!-- Arrow Left -->
                     <span u="arrowleft" class="jssora10l" style="top: 123px; left: 8px;">

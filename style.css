@@ -8,9 +8,20 @@
 }
 
 @font-face{
+    font-family: "SkolaBlack";
+    src: url("./fonts/SkolaSansProOTF/SkolaSans-BlackItalic.otf") format("truetype");
+}
+
+@font-face{
     font-family: "SkolaLight";
     src: url("./fonts/SkolaSansProOTF/SkolaSans-Light.otf") format("truetype");
 }
+
+@font-face{
+    font-family: "SkolaItalic";
+    src: url("./fonts/SkolaSansProOTF/SkolaSans-LightItalic.otf") format("truetype");
+}
+
 @font-face{
     font-family: "SkolaRegularItalic";
     src: url("./fonts/SkolaSansCnProOTF/SkolaSansCn-RegularItalic.otf") format("truetype");
@@ -72,6 +83,11 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 5px;}
 .body { margin-top: 70px; width: 100%; padding: 0px;}
 .noticias-slider { float: left; width: 645px;    height: 389px;    margin-top: 0px;}
+.title { height: 140px; position: absolute; z-index: 5; background: rgba(0,0,0,0.4); padding: 20px; margin: 20px 0 20px 60px; color: white; } 
+.title h2 { font-family: "SkolaRegular", Verdana, Tahoma; }
+.title h2 span { font-family: "SkolaBlack", Verdana, Tahoma; }
+.title h3 { font-family: "SkolaItalic", Verdana, Tahoma; opacity: 0.7; line-height: 30px;}
+.noti-plus { z-index: 5; position: absolute; bottom: 20px; right: 20px; }
 .twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 0px; }
 .noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 201px;position: relative;z-index: 2;position: relative;}
 .noticias h1 { color:#0B7DBF; font-style: italic; font-size: 24px; margin-bottom: 10px;}
