@@ -42,16 +42,16 @@ class ui  {
     private function styleTables($order,$filter){
         $style .= "<style> 
                     .fireUI-table{width:100%;border-collapse: collapse; margin-top:20px; border: 1px solid rgb(180, 180, 180); font-size:12px;}
-                    @media (min-width: 501px) {.fireUI-table tr:hover{background-color:#B9B9B9}}
+                    @media (min-width: 501px) {.fireUI-table tr:hover{background-color:#F6F6F6;}}
                     .fireUI-table td{border-bottom:1px dotted #ccc;padding:4px;}
                     .fireUI-table thead{border-bottom:1px solid #ccc}
                     .fireUI-table *{text-align:left;}
-                    .fireUI-table thead th{ font-size:12px;position:relative; background-color: #D5D5D5; padding: 5px 4px; border-top: 1px solid #B4B4B4;}
+                    .fireUI-table thead th{ font-size:12px;position:relative; background-color: #2AABE1; padding: 5px 4px; border-top: 1px solid #B4B4B4; color:white;}
                     .fireUI_navigation li{padding:10px;}
                     .fireUI-table span {overflow: hidden; text-overflow: ellipsis;}
                     ";
        if ($order || $filter){ 
-       $style .=    "@media (min-width: 501px) {.fireUI-table thead th:hover{background: #B9B9B9;cursor: pointer; }}
+       $style .=    "@media (min-width: 501px) {.fireUI-table thead th:hover{background: #0083B9;cursor: pointer; }}
                     .fireUI-table thead div{position:absolute;left:0px;top:38px;display:none; background:white; padding: 10px; box-shadow: 0px 0px 5px gray;}
                     .fireUI-table thead div input{padding: 3px; font-weight:normal;}";
        }

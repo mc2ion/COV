@@ -1,6 +1,6 @@
 <?php
 include ("./common/functions.php");
-
+include ("./common/verify_login.php");
 ?>
 
 <!DOCTYPE html>

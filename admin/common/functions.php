@@ -1,10 +1,15 @@
 <?php
+session_start();
+include ("class-db.php"); $db = new db();
+include ("class-ui.php"); @$ui = new ui();
+include ("label.php");  $ui->setLabel($label);
+
 
 function my_header($upload=""){
 $out = 
 <<<EOT
     <meta charset="utf-8"/>
-    <title>Cómito Olímpico</title>
+    <title>Comité Olímpico</title>
     <link rel="stylesheet" href="./css/style.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 EOT;
@@ -20,7 +25,7 @@ function top_bar(){
 <<<EOT
 <div class="top-bar">
         <div class="user-info">
-            Bienvenido, Marión <a href="" class="logout">(Salir)</a>
+            Bienvenido, Marión <a href="./?logout" class="logout">(Salir)</a>
         </div>
     </div>
 EOT;
@@ -45,4 +50,10 @@ function menu($selected=""){
     return $out;      
 }
 
+if (isset($_GET["logout"])){
+     setcookie("cov-user-logged-in", "0", time() + 86400, "/");
+     session_destroy();
+     header("Location: ./index.php");
+     exit();
+}
 
