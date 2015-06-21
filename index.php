@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Cómito Olímpico</title>
+    <title>Comité Olímpico</title>
     <link rel="stylesheet" href="css/slider.css"/>
     <link rel="stylesheet" href="style.css"/>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -129,7 +129,11 @@
              <div class="banner">Publicidad</div>
          </div>
          <div class="row">
-             <div class="videos"></div>
+              <div class="videos">
+                    <iframe id="ytplayer" type="text/html" width="576" height="324"
+                    src="https://www.youtube.com/embed/?listType=user_uploads&list=araymoisesramon&theme=light"
+                    frameborder="0" allowfullscreen></iframe>
+                 </div>
              <div class="galeria"></div>
              <div class="clear"></div>
          </div>
@@ -246,8 +250,7 @@
                     </div>
                     <div class="clear"></div>
                 </div>
-             </div>
-            
+             </div>            
         </div>   
     </div>
   </body>
