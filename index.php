@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Cómito Olímpico</title>
+    <title>Comité Olímpico</title>
     <link rel="stylesheet" href="css/slider.css"/>
     <link rel="stylesheet" href="style.css"/>
     <script src="js/jquery-1.11.3.min.js"></script>
