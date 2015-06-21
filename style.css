@@ -83,7 +83,7 @@ ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
 #search {  background: url("./img/search.png") no-repeat scroll 0 0 transparent;   color: #000000;  cursor: pointer;   height: 20px;   padding: 0px;   width: 20px;   color: transparent;   margin-left: 5px; }
 .banner{  padding: 60px 0px;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
 .redes span {color: white;  font-size: 22px; font-family:"SkolaRegular", Verdana, Tahoma}
-.redes {  text-align: center;  float: right;  margin-bottom: 40px;  margin-top: 20px;}
+.redes {  text-align: center;  float: right;  margin-bottom: 10px;  margin-top: 20px;}
 .videos, .galeria {  width: 48%;  height: 324px;   background-color: rgba(255, 255, 255, 0.52);   float: left;  border-radius: 10px;  -webkit-border-radius: 10px;  -moz-border-radius: 10px;}
 .videos{ margin-right: 4%;}
 .row{ margin: 0px 0px 60px; clear: both;} 

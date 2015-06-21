@@ -234,8 +234,7 @@
                         <li class="coi"><img src="./img/coi.png" alt="Rio"/></li>
                         <li class="solidaridad"><img src="./img/rio2016.png" alt="Rio"/></li>
                     </ul>
-                    
-                
+                    <div class="clear"></div>
                 </div>
                 <div class="cred">
                     <p><img src="./img/right.png" alt="Flecha"/> Comité Olímpico Venezolano <?= date('Y')?>. Todos los derechos reservados. Desarrollador por: XXX. Imagen ADDOMO.</p>
