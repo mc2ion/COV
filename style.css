@@ -58,7 +58,7 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .clear {clear: both;margin-bottom: 0px;}
 .user-icon{z-index:2;}
 .body { margin-top: 70px;}
-.noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 5px;}
+.noticias-slider { float: left; width: 645px;    height: 389px;    margin-top: 5px;}
 .twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 5px; }
 .noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 0px 20px 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 221px;position: relative;}
 .noticias h1 { color:#0B7DBF; font-style: italic;}
