@@ -6,8 +6,20 @@
     font-family: "SkolaRegular";
     src: url("./fonts/SkolaSansProOTF/SkolaSans-RegularItalic.otf") format("truetype");
 }
-.top-bar{text-align: right;}
-body{ font-family: "SkolaMedium", Verdana, Tahoma; background: url('./img/background.png'); background-size: 100%; z-index: 0;}
+
+@font-face{
+    font-family: "SkolaLight";
+    src: url("./fonts/SkolaSansProOTF/SkolaSans-Light.otf") format("truetype");
+}
+@font-face{
+    font-family: "SkolaRegularItalic";
+    src: url("./fonts/SkolaSansCnProOTF/SkolaSansCn-RegularItalic.otf") format("truetype");
+}
+
+* {padding: 0; margin: 0;}
+body{ font-family: "SkolaMedium", Verdana, Tahoma; background: #07AEE5;  z-index: 0; padding: 0px; margin: 0px;  margin-bottom: 5px;}
+.top-bar{text-align: right;padding-bottom: 18px;}
+.wrapper{background: white  url('./img/background.png'); background-size: 100%; background-repeat: no-repeat;}
 .twitter a{background:url('./img/twitter.png?v=03'); background-repeat: no-repeat; width: 32px; height: 32px;}
 .share-icon a{background:url('./img/share.png'); background-repeat: no-repeat; width: 43px; height: 43px;}
 .email-icon a{background:url('./img/email.png'); background-repeat: no-repeat; width: 43px; height: 43px;}
@@ -45,7 +57,7 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: url('./img/backgr
 .toronto_atletas a{background:url('./img/toronto_atletas.png?v=03'); background-repeat: no-repeat; width: 250px; height: 188px; display: inline-block; margin-top: 0px;/* margin: 0px 20px; */}
 .punto_olimpico a{background: url('./img/punto_olimpico.png?v=03'); background-repeat: no-repeat; width: 250px; height: 43px; display: inline-block; margin-top: 10px;/* margin: 10px 5px; */}
 .sq a { margin: 0px 5px; width: 90px; height: 90px;}
-.atletas{float: left;margin: 0px 20px;}
+.atletas{float: left;margin: 0px 20px;z-index: 2;position: relative;}
 nav{ text-align: right;}
 .actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); *//* padding: 5px; */padding-right: 0px;}
 .container{width: 100%; max-width: 1200px; margin: 0 auto;}
@@ -57,35 +69,65 @@ border-radius: 5px; -moz-border-radius:5px; -webkit-border-radius:5px; transitio
 span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; display: inline-block; font-size: 12px;  text-align: center;  position: relative;  top: -14px;  left: -10px;  z-index: -1;}
 .clear {clear: both;margin-bottom: 0px;}
 .user-icon{z-index:2;}
-.body { margin-top: 70px;}
-.noticias-slider { float: left; width: 645px;    height: 389px;    margin-top: 5px;}
-.twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 5px; }
-.noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 0px 20px 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 221px;position: relative;}
-.noticias h1 { color:#0B7DBF; font-style: italic;}
+.noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 5px;}
+.body { margin-top: 70px; width: 100%; padding: 0px;}
+.noticias-slider { float: left; width: 645px;    height: 389px;    margin-top: 0px;}
+.twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 0px; }
+.noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 201px;position: relative;z-index: 2;position: relative;}
+.noticias h1 { color:#0B7DBF; font-style: italic; font-size: 24px; margin-bottom: 10px;}
 .plus{text-align: right;margin: 0px;position: absolute;bottom: 20px;right: 20px;}
 .jugador{width: 420px;  margin-top: -30px;}
-.jug{position: absolute; right:0px; margin-top: 0px;z-index: -1;}
-.logo img{width: 250px;margin-top: 10px;}
+.jug{position: absolute; right:0px; margin-top: 0px;z-index: 0;}
+.logo img{width: 250px;margin-top: 0px;}
 ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
 #search {  background: url("./img/search.png") no-repeat scroll 0 0 transparent;   color: #000000;  cursor: pointer;   height: 20px;   padding: 0px;   width: 20px;   color: transparent;   margin-left: 5px; }
-.banner{  padding: 25px 0px;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
+.banner{  padding: 60px 0px;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
 .redes span {color: white;  font-size: 22px; font-family:"SkolaRegular", Verdana, Tahoma}
-.redes {  text-align: center;  float: right;}
-.videos, .galeria {  width: 48%;  height: 300px;   background-color: red;   float: left;}
+.redes {  text-align: center;  float: right;  margin-bottom: 10px;  margin-top: 20px;}
+.videos, .galeria {  width: 48%;  height: 324px;   background-color: rgba(255, 255, 255, 0.52);   float: left;  border-radius: 10px;  -webkit-border-radius: 10px;  -moz-border-radius: 10px;}
 .videos{ margin-right: 4%;}
-.row{ margin: 0px 0px 70px; clear: both;} 
-ul.social-bottom {    padding: 0px;}
+.row{ margin: 0px 0px 60px; clear: both;} 
+ul.social-bottom {    padding: 0px;    margin-top: 15px;}
 .social-bottom li {    margin: 0px 4px;}
-.map {color:white;/* background-color: rgba(11, 125, 191, 0.52); *//* padding: 6px 13px; */}
+.map {color:white;background-color: rgba(255, 255, 255, 0.2);padding: 8px 8px 0px;}
 .map ul li {list-style: none;}
 .map ul li a {text-decoration: none; color:white;}
-.r9 {
-    width: 10%;
-    float: left;
-    font-size: 13px;
-    /* font-weight: 400; */
+.r9 {    width: 11%;    float: left;    font-size: 13px;}
+.r9 ul {    padding: 0px;}
+.r9 ul li {font-size:11px; padding: 5px 0px;}
+.pat-ofic, .pat-loc{
+  height: 40px;
+  text-align: right;
+  font-size: 9px;
+  color: rgb(194, 194, 194);
+  background-color: white;
+  padding: 2px 2px;
 }
-.r9 ul {
-    padding: 0px;
+.pat-loc {height: auto; margin-top: 5px;padding: 0px;}
+.cred{ background: #656565; font-size: 11px;  color: white; margin-top: 15px; padding: 4px 0px;}
+.cred p {  display: inline-block; font-family: "SkolaLight", Verdana, Tahoma;  line-height: 27px;}
+.cred img {vertical-align: middle;}
+.cred ul li {list-style: none; display: inline-block;}
+.cred ul {display: inline-block;}
+.last {margin-bottom: 0px; padding-bottom: 0px;}
+/*Patrocinantes*/
+.pat-loc ul li {list-style-image: none; display: inline-block;margin: 0px 30px;vertical-align: middle;}
+.pat-loc ul {text-align: left;}
+div.right{  float: right;  margin-right: 50px;}
+.header {
+    padding-top: 25px;
+    padding-bottom: 0px;
 }
-.r9 ul li { font-size: 11px;}
+.twitter-box h1 {
+    font-size: 20px;
+    font-style: italic;
+    padding: 3px 0px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    font-family: SkolaRegularItalic, Verdana, Tahoma;
+    text-align: center;
+}
+.twitter-box h1 img{ vertical-align: middle; height: 25px;}
+.noticias p {
+    line-height: 22px;
+}

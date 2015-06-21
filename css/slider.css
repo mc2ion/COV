@@ -18,7 +18,7 @@
     opacity: .7;
     overflow: hidden;
     cursor: pointer;
-    border: #000 1px solid;
+    border: none;
 }
 .jssorb01 div { background-color: gray; }
 .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
