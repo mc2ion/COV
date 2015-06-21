@@ -73,7 +73,7 @@
                 <div id="slider1_container" class="noticias-slider" style="position: relative; top: 0px; left: 0px; width: 645px; height: 389px;">
                     <!-- Slides Container -->
                     <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 645px; height: 389px;">
-                        <div><img u="image" src="image1.jpg" /></div>
+                        <div><img u="image" src="image1.jpg" /><span><h1>Toronto 2015</h1><h2>Juegos Panamericanos Toronto 2015</h2></span></div>
                         <div><img u="image" src="image2.jpg" /></div>
                         <div><img u="image" src="image3.jpg" /></div>
                         <div><img u="image" src="image4.jpg" /></div>
