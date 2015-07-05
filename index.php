@@ -125,8 +125,8 @@
                 </div>
                 <div class="twitter-box">   
                     <h1>Twitter <img src="./img/twitter_hover.png" alt="Twitter" style="vertical-align: middle;"/></h1>
-                    <a class="twitter-timeline" href="https://twitter.com/PuntoOlimpico" data-widget-id="612438112430653445">Tweets por el @PuntoOlimpico.</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
                 <div class="actions">
                      <div class="posiciones sq"><a href=""></a></div>
