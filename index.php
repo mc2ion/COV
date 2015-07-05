@@ -37,11 +37,10 @@
             <div class="container">
                 <div class="top-bar">
                     <ul class="social">
-                            <li class="twitter"><a href=""></a></li>
-                            <li class="facebook"><a href=""></a></li>     
-                            <li class="instagram"><a href=""></a></li>        
-                            <li class="youtube"><a href=""></a></li>        
-                            <li class="linkedin"><a href=""></a></li> 
+                            <li class="twitter"><a target="_blank"  href="https://twitter.com/officialCOV"></a></li>
+                            <li class="facebook"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>     
+                            <li class="instagram"><a  target="_blank" href="http://instagram.com/covofficial"></a></li>        
+                            <li class="youtube"><a target="_blank"  href=""></a></li>      
                     </ul>
                     <ul class="share">
                             <li class="share-icon"><a href=""></a></li>
@@ -173,11 +172,10 @@
              <div class="redes">
                 <span>Redes Sociales</span>
                 <ul class="social-bottom">
-                    <li class="twitter-b"><a href=""></a></li>
-                    <li class="facebook-b"><a href=""></a></li>
-                    <li class="instagram-b"><a href=""></a></li>
-                    <li class="youtube-b"><a href=""></a></li>
-                    <li class="linkedin-b"><a href=""></a></li>
+                    <li class="twitter-b"><a  target="_blank" href="https://twitter.com/officialCOV"></a></li>
+                    <li class="facebook-b"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>
+                    <li class="instagram-b"><a target="_blank" href="http://instagram.com/covofficial"></a></li>
+                    <li class="youtube-b"><a target="_blank"  href=""></a></li>
                 </ul>
              </div>
              <div class="clear"></div>
@@ -272,11 +270,10 @@
                     <p><img src="./img/right.png" alt="Flecha"/> Comité Olímpico Venezolano <?= date('Y')?>. Todos los derechos reservados. Desarrollador por: XXX. Imagen ADDOMO.</p>
                     <div class="right">Siga nuestras redes sociales <img src="./img/right.png" alt="Flecha"/>
                         <ul>
-                            <li><img src="./img/twitter_hover.png" alt="Twitter"/></li>
-                            <li><img src="./img/facebook_hover.png" alt="Facebook"/></li>
-                            <li><img src="./img/instagram_hover.png" alt="Facebook"/></li>
+                            <li><a target="_blank"  href="https://twitter.com/officialCOV"><img src="./img/twitter_hover.png" alt="Twitter"/></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"><img src="./img/facebook_hover.png" alt="Facebook"/></a></li>
+                            <li><a  target="_blank" href="http://instagram.com/covofficial"><img src="./img/instagram_hover.png" alt="Instagram"/></a></li>
                             <li><img src="./img/youtube_hover.png" alt="Facebook"/></li>
-                            <li><img src="./img/linkedin_hover.png" alt="Facebook"/></li>
                         </ul>
                     </div>
                     <div class="clear"></div>
