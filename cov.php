@@ -143,8 +143,7 @@
             <div class="row">
                <div class="noticias">
                     <h1>Noticias</h1>
-                    <p>Blah blah algun texto irá aquí sobre las noticias más importantes. bli bli
-                    blu blu. Blah blah algun texto irá aquí sobre las noticias.</p>
+                    <p>Aquí irían las noticias más importantes con una pequeña descripción.</p>
                     <p class="plus"><img src='./img/plus.png'/></p>
              </div>
              <div class="atletas">
