@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Comité Olímpico</title>
+    <title>Comit&eacute; Ol&iacute;mpico</title>
     <link rel="stylesheet" href="css/slider.css"/>
     <link rel="stylesheet" href="style.css"/>
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -32,7 +32,7 @@
     </script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper-news">
         <div class="header">
             <div class="container">
                 <div class="top-bar">
@@ -56,13 +56,13 @@
                 <ul class="menu">
                     <li><a href="">COV</a></li>
                     <li><a href="">JJOO</a></li>
-                    <li><a href="">Ciclo Olímpico</a></li>
+                    <li><a href="">Ciclo Ol&iacute;mpico</a></li>
                     <li><a href="">Disciplinas</a></li>
                     <li><a href="">Atletas</a></li>
                     <li><a href="">Federaciones</a></li>
                     <li><a href="">Fotos</a></li>
                     <li><a href="">Videos</a></li>
-                    <li><a href="news.php">Noticias</a></li>
+                    <li><a class="current" href="">Noticias</a></li>
                 </ul>
             </nav>
             <div class="logo">
@@ -122,11 +122,6 @@
                         <div u="prototype"></div>
                     </div>
                 </div>
-                <div class="twitter-box">   
-                    <h1>Twitter <img src="./img/twitter_hover.png" alt="Twitter" style="vertical-align: middle;"/></h1>
-                    <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
                 <div class="actions">
                      <div class="posiciones sq"><a href=""></a></div>
                      <div class="olimpismo sq"><a href=""></a></div>
@@ -143,20 +138,14 @@
             <div class="row">
                <div class="noticias">
                     <h1>Noticias</h1>
-                    <p>Aquí irían las noticias más importantes con una pequeña descripción.</p>
-                    <p class="plus"><img src='./img/plus.png'/></p>
+                    <p>Aqu� ir�an las noticias m�s importantes con una peque�a descripci�n.</p>
              </div>
-             <div class="atletas">
-                <div class="toronto_atletas"><a href=""></a></div>
-                 <div class="punto_olimpico"><a href=""></a></div>
-             </div>
-             <div class="jug">
-                <img src="./img/jugador.png" class="jugador"/>
-             </div> 
+                <div class="twitter-box">   
+                    <h1>Twitter <img src="./img/twitter_hover.png" alt="Twitter" style="vertical-align: middle;"/></h1>
+                    <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
          <div class="clear"></div>
-         </div>
-         <div class="row">
-             <div class="banner">Publicidad</div>
          </div>
          <div class="row">
               <div class="videos">
@@ -165,18 +154,6 @@
                     frameborder="0" allowfullscreen></iframe>
                  </div>
              <div class="galeria"></div>
-             <div class="clear"></div>
-         </div>
-         <div class="row">
-             <div class="redes">
-                <span>Redes Sociales</span>
-                <ul class="social-bottom">
-                    <li class="twitter-b"><a  target="_blank" href="https://twitter.com/officialCOV"></a></li>
-                    <li class="facebook-b"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>
-                    <li class="instagram-b"><a target="_blank" href="http://instagram.com/covofficial"></a></li>
-                    <li class="youtube-b"><a target="_blank"  href=""></a></li>
-                </ul>
-             </div>
              <div class="clear"></div>
          </div>
                   <div class="row">
@@ -193,12 +170,12 @@
                         <div class="r9">
                             <span>JJOO</span>
                             <ul class="map-jjoo">
-                                <li><a href="">Participación</a></li>
-                                <li><a href="">Olímpicos Juveniles</a></li>
+                                <li><a href="">Participaci&oacute;n</a></li>
+                                <li><a href="">Ol&iacute;mpicos Juveniles</a></li>
                             </ul>
                         </div>
                         <div class="r9">
-                            <span>Ciclo Olímpico</span>
+                            <span>Ciclo Ol&iacute;mpico</span>
                             <ul class="map-co">
                                 <li><a href="">Panamericanos</a></li>
                                 <li><a href="">Centroamericanos</a></li>
@@ -210,19 +187,19 @@
                             <span>Disciplinas</span>
                             <ul class="disciplinas">
                                 <li><a href="">JJOO</a></li>
-                                <li><a href="">Ciclo Olímpicos</a></li>
+                                <li><a href="">Ciclo Ol&iacute;mpicos</a></li>
                             </ul>
                         </div>
                         <div class="r9">
                             <span>Atletas</span>
                             <ul class="map-atletas">
                                 <li><a href="">Registrados</a></li>
-                                <li><a href="">Participación Ciclo</a></li>
-                                <li><a href="">Participación JJOO</a></li>
+                                <li><a href="">Participaci&oacute;n Ciclo</a></li>
+                                <li><a href="">Participaci&oacute;n JJOO</a></li>
                             </ul>
                         </div>
                         <div class="r9">
-                            <span>Federación</span>
+                            <span>Federaci&oacute;n</span>
                             <ul class="map-federacion">
                                 <li><a href="">Asociadas</a></li>
                             </ul>
@@ -234,7 +211,7 @@
                             </ul>
                         </div>
                         <div class="r9">
-                            <span>Vídeos</span>
+                            <span>V&iacute;deos</span>
                             <ul class="map-videos">
                                 <li><a href="">Eventos deportivos</a></li>
                             </ul>
@@ -246,6 +223,15 @@
                                 <li><a href="">Eventos</a></li>
                             </ul>
                         </div>
+                         <div class="redes">
+                            <span>Redes Sociales</span>
+                            <ul class="social-bottom">
+                                <li class="twitter-b"><a  target="_blank" href="https://twitter.com/officialCOV"></a></li>
+                                <li class="facebook-b"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>
+                                <li class="instagram-b"><a target="_blank" href="http://instagram.com/covofficial"></a></li>
+                                <li class="youtube-b"><a target="_blank"  href=""></a></li>
+                            </ul>
+                         </div>
                         <div class="clear"></div>
                      </div>
                  </div>
@@ -266,7 +252,7 @@
                     <div class="clear"></div>
                 </div>
                 <div class="cred">
-                    <p><img src="./img/right.png" alt="Flecha"/> Comité Olímpico Venezolano <?= date('Y')?>. Todos los derechos reservados. Desarrollador por: XXX. Imagen ADDOMO.</p>
+                    <p><img src="./img/right.png" alt="Flecha"/> Comit&eacute; Ol&iacute;mpico Venezolano <?= date('Y')?>. Todos los derechos reservados. Desarrollador por: XXX. Imagen ADDOMO.</p>
                     <div class="right">Siga nuestras redes sociales <img src="./img/right.png" alt="Flecha"/>
                         <ul>
                             <li><a target="_blank"  href="https://twitter.com/officialCOV"><img src="./img/twitter_hover.png" alt="Twitter"/></a></li>
