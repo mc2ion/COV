@@ -6,32 +6,16 @@
     <link rel="stylesheet" href="css/slider.css"/>
     <link rel="stylesheet" href="style.css"/>
     <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/jssor.slider.mini.js"></script>
-    <script>
-        jQuery(document).ready(function ($) {
-            var options = { 
-                $AutoPlay: true,
-                $BulletNavigatorOptions: {
-                    $Class: $JssorBulletNavigator$,
-                    $ChanceToShow: 2,
-                    $SpacingX: 10,
-                    $SpacingY: 10,
-                    $AutoCenter: 1
-                },
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$,
-                    $ChanceToShow: 2,
-                    $AutoCenter: 2                } 
-            };
-            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-            
-            $("div[u='navigator']").children('div').each(function(i){
-                $(this).addClass("background"+i);
-            });
-        });
-    </script>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId=199975960099979";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div class="wrapper-news">
         <div class="header">
             <div class="container">
@@ -73,55 +57,27 @@
     </div>   
     <div class="body">
         <div class="container">
-            <div class="row">
-                <div id="slider1_container" class="noticias-slider" style="position: relative; top: 0px; left: 0px; width: 645px; height: 389px;">
-                    <!-- Slides Container -->
-                    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 645px; height: 389px;">
-                        <div class="1">
-                            <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
-                            </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
-                            <img u="image" src="image1.jpg" />
-                        </div>
-                        <div>
-                            <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
-                            </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
-                            <img u="image" src="image2.jpg" />
-                        </div>
-                        <div>
-                            <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
-                            </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
-                            <img u="image" src="image3.jpg" />
-                        </div>
-                        <div>
-                            <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
-                            </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>`
-                            <img u="image" src="image4.jpg" />
-                        </div>
-                    </div>
-                    <!-- Arrow Left -->
-                    <span u="arrowleft" class="jssora10l" style="top: 123px; left: 8px;">
-                    </span>
-                    <!-- Arrow Right -->
-                    <span u="arrowright" class="jssora10r" style="top: 123px; right: 8px;">
-                    </span>
-                    <!-- bullet navigator container -->
-                    <div u="navigator" class="jssorb01" style="bottom: 16px; right: 10px;">
-                        <!-- bullet navigator item prototype -->
-                        <div u="prototype"></div>
-                    </div>
+            <div class="col large-1">
+                <div class="noticia-img">
+                    <img src="img/noticia-img.png" />
                 </div>
+               <div class="noticias">
+                    <h1>Inscritos los atletas Venezolanos</h1>
+                    <h3></h3>
+                    <p>Aqu&iacute; ir&iacute;an las noticias m&aacute;s importantes con una peque&nacute;a descripci&oacute;n.</p>
+                    <div class="share-btns">
+                    <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet" data-count="none">
+Tweet</a>
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+                </div></div>
+                <div>
+                    <div>Galer&iacute;a</div>
+                    <div>Noticias</div>
+                    <div>Eventos</div>
+                </div>
+            </div> 
+            <div class="col large-2">
                 <div class="actions">
                      <div class="posiciones sq"><a href=""></a></div>
                      <div class="olimpismo sq"><a href=""></a></div>
@@ -133,28 +89,16 @@
                      <div class="contacto"><a href=""></a></div>
                      <div class="ubicanos"><a href=""></a></div>
                 </div>
-                <div class="clear"></div>
-            </div> 
-            <div class="row">
-               <div class="noticias">
-                    <h1>Noticias</h1>
-                    <p>Aquí irían las noticias más importantes con una pequeña descripción.</p>
-             </div>
                 <div class="twitter-box">   
-                    <h1>Twitter <img src="./img/twitter_hover.png" alt="Twitter" style="vertical-align: middle;"/></h1>
+                    <h1>Twitter <img src="./img/twitter-news.png" alt="Twitter" style="vertical-align: middle;"/></h1>
                     <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
-         <div class="clear"></div>
-         </div>
-         <div class="row">
-              <div class="videos">
-                    <iframe id="ytplayer" type="text/html" width="576" height="324"
+                <div class="videos">
+                    <iframe id="ytplayer" type="text/html" width="289" height="162.5625"
                     src="https://www.youtube.com/embed/?listType=user_uploads&list=araymoisesramon&theme=light"
                     frameborder="0" allowfullscreen></iframe>
                  </div>
-             <div class="galeria"></div>
-             <div class="clear"></div>
          </div>
                   <div class="row">
                      <div class="map">
@@ -247,7 +191,7 @@
                         <li class="rio2016_2"><img src="./img/rio2016_2.png" alt="Rio"/></li>
                         <li class="toronto2015"><img src="./img/toronto2015.png" alt="Rio"/></li>
                         <li class="coi"><img src="./img/coi.png" alt="Rio"/></li>
-                        <li class="solidaridad"><img src="./img/rio2016.png" alt="Rio"/></li>
+                        <li class="solidaridad"><img src="./img/solidaridad.png" alt="Solidaridad"/></li>
                     </ul>
                     <div class="clear"></div>
                 </div>

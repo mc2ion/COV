@@ -52,6 +52,14 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: #07AEE5;  z-index
 .instagram-b a{background:url('./img/instagram-b.png?v=01'); background-repeat:  no-repeat; width: 60px; height: 60px;}
 .youtube-b a{background:url('./img/youtube-b.png?v=01'); background-repeat:  no-repeat; width: 60px; height: 60px;}
 
+.wrapper-news .twitter-b a { background:url('./img/twitter-g.png'); background-size: 60px 60px; }
+.wrapper-news .facebook-b a { background:url('./img/facebook-g.png'); background-size: 60px 60px; }
+.wrapper-news .linkedin-b a { background:url('./img/linkedin-g.png');background-size: 60px 60px; }
+.wrapper-news .instagram-b a { background:url('./img/instagram-g.png'); background-size: 60px 60px; }
+.wrapper-news .youtube-b a { background:url('./img/youtube-g.png'); background-size: 60px 60px; }
+
+.share-btns { position: absolute; bottom: 20px; right: 20px; }
+
 .social, .share, .user { z-index: 1; display: inline-block; padding: 0px;}
 .search {display: inline-block;position: relative;top: -18px;margin-left: 10px;}
 .search input{border-radius: 7px;  border: none;  padding: 7px;outline: none;}
@@ -72,7 +80,8 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: #07AEE5;  z-index
 .sq a { margin: 0px 5px; width: 90px; height: 90px;}
 .atletas{float: left;margin: 0px 20px;z-index: 2;position: relative;}
 nav{ text-align: right;}
-.actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); *//* padding: 5px; */padding-right: 0px;}
+.actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); *//* padding: 5px; */padding-right: 0;}
+.wrapper-news .actions { padding-bottom: 10px }
 .container{width: 100%; max-width: 1200px; margin: 0 auto;}
 .menu {width: 100%; max-width: 690px; float: right;}
 .menu li {display: inline-block; list-style-type: none;margin-bottom: 10px;}
@@ -84,42 +93,48 @@ border-radius: 5px; -moz-border-radius:5px; -webkit-border-radius:5px; transitio
 span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; display: inline-block; font-size: 12px;  text-align: center;  position: relative;  top: -14px;  left: -10px;  z-index: -1;}
 .clear {clear: both;margin-bottom: 0px;}
 .user-icon{z-index:2;}
-.noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 5px;}
-.body { margin-top: 70px; width: 100%; padding: 0px;}
-.noticias-slider { float: left; width: 645px;    height: 389px;    margin-top: 0px;}
+.noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 0;}
+.body { margin-top: 70px; width: 100%; padding: 0;}
+.noticia-img { float: left; background-color: rgb(202, 202, 202); width: 876px; height: 389px;  margin: 0 0 10px;}
+.noticia-img img { width: 876px; height: 389px; }
 .title { height: 140px; position: absolute; z-index: 5; background: rgba(0,0,0,0.4); padding: 20px; margin: 20px 0 20px 60px; color: white; } 
 .title h2 { font-family: "SkolaRegular", Verdana, Tahoma; }
 .title h2 span { font-family: "SkolaBlack", Verdana, Tahoma; }
 .title h3 { font-family: "SkolaItalic", Verdana, Tahoma; opacity: 0.7; line-height: 30px;}
 .noti-plus { z-index: 5; position: absolute; bottom: 20px; right: 20px; }
-.twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 0px; }
-.wrapper-news .twitter-box { width: 289px; background-color: #F2F2F2; border: 1px solid #F2F2F2; }
+.twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 0; }
+.wrapper-news .twitter-box { width: 289px; background-color: #F2F2F2; border: 1px solid #F2F2F2; margin-left: 3px; margin-bottom: 30px;}
 .noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 201px;position: relative;z-index: 2;position: relative;}
 .wrapper-news .noticias { max-width: 836px; }
 .noticias h1 { color:#0B7DBF; font-style: italic; font-size: 24px; margin-bottom: 10px;}
-.plus{text-align: right;margin: 0px;position: absolute;bottom: 20px;right: 20px;}
+.plus{text-align: right;margin: 0;position: absolute;bottom: 20px;right: 20px;}
 .jugador{width: 420px;  margin-top: -30px;}
-.jug{position: absolute; right:0px; margin-top: 0px;z-index: 0;}
-.logo img{width: 250px;margin-top: 0px;}
+.jug{position: absolute; right:0; margin-top: 0;z-index: 0;}
+.logo img{width: 250px;margin-top: 0;}
 ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
-#search {  background: url("./img/search.png") no-repeat scroll 0 0 transparent;   color: #000000;  cursor: pointer;   height: 20px;   padding: 0px;   width: 20px;   color: transparent;   margin-left: 5px; }
-.banner{  padding: 60px 0px;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
+#search {  background: url("./img/search.png") no-repeat scroll 0 0 transparent;   color: #000000;  cursor: pointer;   height: 20px;   padding: 0;   width: 20px;   color: transparent;   margin-left: 5px; }
+.wrapper-news #search { background: url("./img/search-blue.png") no-repeat scroll 0 0 transparent; background-size: 20px 20px;}
+.banner{  padding: 60px 0;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
 .redes span {color: white;  font-size: 22px; font-family:"SkolaRegular", Verdana, Tahoma}
 .wrapper-news .redes span { color: #B3B3B3; }
 .redes {  text-align: center;  float: right;  margin-bottom: 10px;  margin-top: 20px;}
 .videos, .galeria {  width: 48%;  height: 324px;   background-color: rgba(255, 255, 255, 0.52);   float: left;  border-radius: 10px;  -webkit-border-radius: 10px;  -moz-border-radius: 10px;}
-.videos{ margin-right: 4%;}
-.row{ margin: 0px 0px 60px; clear: both;} 
-ul.social-bottom {    padding: 0px;    margin-top: 15px;}
-.social-bottom li {    margin: 0px 4px;}
-.map {color:white;background-color: rgba(255, 255, 255, 0.2);padding: 8px 8px 0px;}
+.videos{ margin-right: 4%; width: 289px; height: 162.5625px; }
+.wrapper-news .videos { margin-left: 3px; }
+.row{ margin: 0 0 60px; clear: both;} 
+.col { float: left; }
+.large-1 { width: 75%; max-width: 900px; }
+.large-2 { width: 25%; max-width: 300px; }
+ul.social-bottom {    padding: 0;    margin-top: 15px;}
+.social-bottom li {    margin: 0 4px;}
+.map {color:white;background-color: rgba(255, 255, 255, 0.2);padding: 8px 8px 0;}
 .wrapper-news .map { color: #B3B3B3; }
 .map ul li {list-style: none;}
 .map ul li a {text-decoration: none; color:white;}
 .wrapper-news .map ul li a { color: #B3B3B3; }
 .r9 {    width: 11%;    float: left;    font-size: 13px;}
-.r9 ul {    padding: 0px;}
-.r9 ul li {font-size:11px; padding: 5px 0px;}
+.r9 ul {    padding: 0;}
+.r9 ul li {font-size:11px; padding: 5px 0;}
 .pat-ofic, .pat-loc{
   height: 40px;
   text-align: right;
@@ -128,25 +143,25 @@ ul.social-bottom {    padding: 0px;    margin-top: 15px;}
   background-color: white;
   padding: 2px 2px;
 }
-.pat-loc {height: auto; margin-top: 5px;padding: 0px;}
-.cred{ background: #656565; font-size: 11px;  color: white; margin-top: 15px; padding: 4px 0px;}
+.pat-loc {height: auto; margin-top: 5px;padding: 0;}
+.cred{ background: #656565; font-size: 11px;  color: white; margin-top: 15px; padding: 4px 0;}
 .cred p {  display: inline-block; font-family: "SkolaLight", Verdana, Tahoma;  line-height: 27px;}
 .cred img {vertical-align: middle;}
 .cred ul li {list-style: none; display: inline-block;}
 .cred ul {display: inline-block;}
-.last {margin-bottom: 0px; padding-bottom: 0px;}
+.last {margin-bottom: 0; padding-bottom: 0;}
 /*Patrocinantes*/
-.pat-loc ul li {list-style-image: none; display: inline-block;margin: 0px 30px;vertical-align: middle;}
+.pat-loc ul li {list-style-image: none; display: inline-block;margin: 0 30px;vertical-align: middle;}
 .pat-loc ul {text-align: left;}
 div.right{  float: right;  margin-right: 50px;}
 .header {
     padding-top: 25px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 .twitter-box h1 {
     font-size: 20px;
     font-style: italic;
-    padding: 3px 0px;
+    padding: 3px 0;
     color: #FFFFFF;
     margin-bottom: 5px;
     font-family: SkolaRegularItalic, Verdana, Tahoma;
