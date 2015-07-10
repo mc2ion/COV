@@ -63,45 +63,28 @@
                 </div>
                <div class="noticias">
                     <h1>Inscritos los atletas Venezolanos</h1>
-                    <h3></h3>
-                    <p>Aqu&iacute; ir&iacute;an las noticias m&aacute;s importantes con una peque&nacute;a descripci&oacute;n.</p>
+                    <h3>351 atletas, fueron los inscritos para competir en los XVII Juegos Deportivos Panamericanos que se realizar&aacute;n en Toronto del 10 al 26 de julio.</h3>
+                    <p><span>(Prensa Comit&eacute; Ol&iacute;mpico Venezolano. 02 de Julio. Salvador Almea).</span> La delegaci&oacute;n qued&oacute; inscrita con 351 atletas, 196 en masculino y 155 en feminino. El proceso se llev&oacute; a cabo en el Centro de Bienvenida de la Villa de los atletas Panamericanos/para panamericanos CIBC en Toronto, ubicada en: 65 Trinity Street, Toronto,ON. M5A3T1.</p>
+                    <p>En esta reuni&oacute;n donde todo se realiz&oacute; con toda normalidad, estuvieron presentes por Venezuela, el licenciado Arturo Castillo, Jefe de Misi&oacute;n de la delegaci&oacute;n de Venezuela; la doctora Elida P&aacute;rraga, Secretaria General del COV; la se&nacute;ora &Eacute;lida Barreto, responsable de acreditaci&oacute;n del COV; la licenciada Magdampi Mar&iacute;n, Coordinadora T&eacute;cnica y Jos&eacute; Rivas, por Mindeporte. Por el Comit&eacute; Organizador de los juegos TO2015, Paola Mora Gerente de Servicios a los CON; Sarah Hardouin Coordinadora de Servicios de Acreditaci&oacute;n y Carole Fuchs Gerente de Inscripci&oacute;n Deportiva.</p>
+                    <p><span>Los puntos a tratar de esta reuni&oacute;n fueron:</span><br />Inscripciones Deportivas: se revis&oacute; el reporte de Inscripci&oacute;n nominal, para garantizar la participaci&oacute;n de los atletas y sus eventos.</p>
+                    <p><span>Calculadora de Tama&nacute;o estimado de Delegaci&oacute;n:</span> Actualizaci&oacute;n de la Calculadora.</p>
+                    <p><span>Acreditaci&oacute;n:</span> revisi&oacute;n del reporte de privilegios de acceso, para asegurar que se respeten en lineamientos de acreditaci&oacute;n y que los privilegios de accesos de cada delegado u oficial sean correctos revisi&oacute;n de herramientas de Asignaci&oacute;n de Oficiales de equipo, para confirmar las asignaciones ALL - 3 - 1 y las transferencia de Ao.</p>
+                    <p><span>Asignaci&oacute;n:</span> revisi&oacute;n de los espacios asignados al CON en la Villa y Hospedaje Sat&eacute;lite.</p>
+                    <p><span>Servicio a los CON:</span> revisi&oacute;n del cuestionario de la DRM, as&iacute; como tratar cualquier punto de inter&eacute;s.</p>
+                    <p>Adem&aacute;s de los atletas, tambi&eacute;n se realiz&oacute; la inscripci&oacute;n de los oficiales, 1 Jefe de Misi&oacute;n, 3 Subjefes de Misi&oacute;n, 1 Attache Panamericano y 1 Veterinario, se suman a la delegaci&oacute;n de participantes en los Juegos Panamericanos.</p>
                     <div class="share-btns">
                     <a class="twitter-share-button"
   href="https://twitter.com/intent/tweet" data-count="none">
 Tweet</a>
                     <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
-                </div></div>
+                </div>
+                </div>
                 <div>
-                    <div>Galer&iacute;a</div>
-                    <div>Noticias</div>
-                    <div>Eventos</div>
+                    <span>Galer&iacute;a</span>
+                    <span>Noticias</span>
+                    <span>Eventos</span>
                 </div>
-            </div> 
-            <div class="col large-2">
-                <div class="actions">
-                     <div class="posiciones sq"><a href=""></a></div>
-                     <div class="olimpismo sq"><a href=""></a></div>
-                     <div class="oficiales sq"><a href=""></a></div>
-                     <div class="boletin"><a href=""></a></div>
-                     <div class="media"><a href=""></a></div>
-                     <div class="calendario"><a href=""></a></div>
-                     <div class="toronto"><a href=""></a></div>
-                     <div class="contacto"><a href=""></a></div>
-                     <div class="ubicanos"><a href=""></a></div>
-                </div>
-                <div class="twitter-box">   
-                    <h1>Twitter <img src="./img/twitter-news.png" alt="Twitter" style="vertical-align: middle;"/></h1>
-                    <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-                <div class="videos">
-                    <iframe id="ytplayer" type="text/html" width="289" height="162.5625"
-                    src="https://www.youtube.com/embed/?listType=user_uploads&list=araymoisesramon&theme=light"
-                    frameborder="0" allowfullscreen></iframe>
-                 </div>
-         </div>
-                  <div class="row">
-                     <div class="map">
+                <div class="map">
                         <div class="r9">
                             <span>COV</span>
                             <ul class="map-cov">
@@ -167,17 +150,46 @@ Tweet</a>
                                 <li><a href="">Eventos</a></li>
                             </ul>
                         </div>
-                         <div class="redes">
-                            <span>Redes Sociales</span>
-                            <ul class="social-bottom">
-                                <li class="twitter-b"><a  target="_blank" href="https://twitter.com/officialCOV"></a></li>
-                                <li class="facebook-b"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>
-                                <li class="instagram-b"><a target="_blank" href="http://instagram.com/covofficial"></a></li>
-                                <li class="youtube-b"><a target="_blank"  href=""></a></li>
-                            </ul>
-                         </div>
                         <div class="clear"></div>
                      </div>
+            </div> 
+            <div class="col large-2">
+                <div class="actions">
+                     <div class="posiciones sq"><a href=""></a></div>
+                     <div class="olimpismo sq"><a href=""></a></div>
+                     <div class="oficiales sq"><a href=""></a></div>
+                     <div class="boletin"><a href=""></a></div>
+                     <div class="media"><a href=""></a></div>
+                     <div class="calendario"><a href=""></a></div>
+                     <div class="toronto"><a href=""></a></div>
+                     <div class="contacto"><a href=""></a></div>
+                     <div class="ubicanos"><a href=""></a></div>
+                </div>
+                <div class="twitter-box">   
+                    <h1>Twitter <img src="./img/twitter-news.png" alt="Twitter" style="vertical-align: middle;"/></h1>
+                    <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                <div class="videos">
+                    <iframe id="ytplayer" type="text/html" width="289" height="162.5625"
+                    src="https://www.youtube.com/embed/?listType=user_uploads&list=araymoisesramon&theme=light"
+                    frameborder="0" allowfullscreen></iframe>
+                 </div>
+                 <div class="banner">
+                    <img src="img/toronto-banner.png" />
+                 </div>                 
+                 <div class="redes">
+                    <span>Redes Sociales</span>
+                    <ul class="social-bottom">
+                        <li class="twitter-b"><a  target="_blank" href="https://twitter.com/officialCOV"></a></li>
+                        <li class="facebook-b"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>
+                        <li class="instagram-b"><a target="_blank" href="http://instagram.com/covofficial"></a></li>
+                        <li class="youtube-b"><a target="_blank"  href=""></a></li>
+                    </ul>
+                 </div>
+         </div>
+                  <div class="row">
+                     
                  </div>
                 
             </div> 
