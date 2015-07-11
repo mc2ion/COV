@@ -13,6 +13,11 @@
 }
 
 @font-face{
+    font-family: "SkolaBold";
+    src: url("./fonts/SkolaSansProOTF/SkolaSans-BoldItalic.otf") format("truetype");
+}
+
+@font-face{
     font-family: "SkolaLight";
     src: url("./fonts/SkolaSansProOTF/SkolaSans-Light.otf") format("truetype");
 }
@@ -115,7 +120,16 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 0; }
 .wrapper-news .twitter-box { width: 289px; background-color: #F2F2F2; border: 1px solid #F2F2F2; margin-left: 3px; margin-bottom: 30px;}
 .noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 201px;position: relative;z-index: 2;position: relative;}
-.wrapper-news .noticias { max-width: 836px; min-height: 938px; }
+.wrapper-news .noticias { max-width: 836px; min-height: 775px; margin-bottom: 20px; }
+.wrapper-news .noticias h1 { color: #057dc1; font-family: "SkolaRegularItalic"; font-size: 45px; margin-bottom: 10px; }
+.wrapper-news .noticias h1 span { font-family: "SkolaBlack"; }
+.wrapper-news .noticias h3 { color: #057dc1; font-family: "SkolaItalic"; font-size: 19px; padding: 0 0 20px; }
+.wrapper-news .noticias p { line-height: 22px; font-family: "RobotoLight"; font-size: 18px; padding-bottom: 20px; }
+.wrapper-news .noticias p span { font-family: "RobotoMedium"; color: #057dc1; }
+.wrapper-news ul.nav { padding-bottom: 20px; }
+.wrapper-news ul.nav li { display: inline-block; width: 30%; height: 150px; background-color: rgba(0,0,0,.1); margin-right: 29px; line-height: 150px; text-align: center; border-radius: 10px; }
+.wrapper-news ul.nav li:last-child { margin-right: 0; }
+.wrapper-news ul.nav li a { font-family: "SkolaBold"; text-decoration: none; color: #057dc1; font-size: 20px; }
 .noticias h1 { color:#0B7DBF; font-style: italic; font-size: 24px; margin-bottom: 10px;}
 .plus{text-align: right;margin: 0;position: absolute;bottom: 20px;right: 20px;}
 .jugador{width: 420px;  margin-top: -30px;}
@@ -131,8 +145,10 @@ ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
 .wrapper-news .redes span { color: #B3B3B3; width: 300px; }
 .redes {  text-align: center;  float: right;  margin-bottom: 10px;  margin-top: 20px;}
 .videos, .galeria {  width: 48%;  height: 324px;   background-color: rgba(255, 255, 255, 0.52);   float: left;  border-radius: 10px;  -webkit-border-radius: 10px;  -moz-border-radius: 10px;}
-.videos{ margin-right: 4%; width: 289px; height: 162.5625px; }
-.wrapper-news .videos { margin-left: 3px; margin-bottom: 60px; }
+.videos { margin-right: 4%; }
+.wrapper-news .videos { margin-left: 3px; margin-bottom: 60px; width: 289px; height: 162.5625px; }
+.sello { width: 21px; height: auto;   padding: 0 20px 0 10px; }
+.up { -ms-transform: rotate(270deg); -webkit-transform: rotate(270deg); transform: rotate(270deg); }
 .row{ margin: 0 0 60px; clear: both;} 
 .col { float: left; }
 .large-1 { width: 75%; max-width: 900px; }
@@ -140,7 +156,7 @@ ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
 ul.social-bottom {    padding: 0;    margin-top: 15px;}
 .social-bottom li {    margin: 0 4px;}
 .map {color:white;background-color: rgba(255, 255, 255, 0.2);padding: 8px 8px 0;}
-.wrapper-news .map { color: #B3B3B3; max-width: 860px; border-radius: 10px; padding: 8px; }
+.wrapper-news .map { color: #B3B3B3; max-width: 860px; border-radius: 10px; padding: 8px; margin-bottom: 20px; }
 .map ul li {list-style: none;}
 .map ul li a {text-decoration: none; color:white;}
 .wrapper-news .map ul li a { color: #B3B3B3; }
@@ -160,12 +176,13 @@ ul.social-bottom {    padding: 0;    margin-top: 15px;}
 .cred p {  display: inline-block; font-family: "SkolaLight", Verdana, Tahoma;  line-height: 27px;}
 .cred img {vertical-align: middle;}
 .cred ul li {list-style: none; display: inline-block;}
-.cred ul {display: inline-block;}
+.cred ul { display: inline-block; margin-right: 120px; }
+#news { background-color: white; }
 .last {margin-bottom: 0; padding-bottom: 0;}
 /*Patrocinantes*/
 .pat-loc ul li {list-style-image: none; display: inline-block;margin: 0 30px;vertical-align: middle;}
 .pat-loc ul {text-align: left;}
-div.right{  float: right;  margin-right: 50px;}
+div.right{  float: right;  margin-right: 5px;}
 .header {
     padding-top: 25px;
     padding-bottom: 0;

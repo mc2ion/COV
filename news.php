@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="js/jquery-1.11.3.min.js"></script>
   </head>
-  <body>
+  <body id="news">
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -24,7 +24,7 @@
                             <li class="twitter"><a target="_blank"  href="https://twitter.com/officialCOV"></a></li>
                             <li class="facebook"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>     
                             <li class="instagram"><a  target="_blank" href="http://instagram.com/covofficial"></a></li>        
-                            <li class="youtube"><a target="_blank"  href=""></a></li>      
+                            <li class="youtube"><a target="_blank"  href="https://www.youtube.com/channel/UCm7DUK_V4KB-NNvxYVrTWyg"></a></li>      
                     </ul>
                     <ul class="share">
                             <li class="share-icon"><a href=""></a></li>
@@ -62,7 +62,7 @@
                     <img src="img/noticia-img.png" />
                 </div>
                <div class="noticias">
-                    <h1>Inscritos los atletas Venezolanos</h1>
+                    <h1>Inscritos los atletas <span>Venezolanos</span></h1>
                     <h3>351 atletas, fueron los inscritos para competir en los XVII Juegos Deportivos Panamericanos que se realizar&aacute;n en Toronto del 10 al 26 de julio.</h3>
                     <p><span>(Prensa Comit&eacute; Ol&iacute;mpico Venezolano. 02 de Julio. Salvador Almea).</span> La delegaci&oacute;n qued&oacute; inscrita con 351 atletas, 196 en masculino y 155 en feminino. El proceso se llev&oacute; a cabo en el Centro de Bienvenida de la Villa de los atletas Panamericanos/para panamericanos CIBC en Toronto, ubicada en: 65 Trinity Street, Toronto,ON. M5A3T1.</p>
                     <p>En esta reuni&oacute;n donde todo se realiz&oacute; con toda normalidad, estuvieron presentes por Venezuela, el licenciado Arturo Castillo, Jefe de Misi&oacute;n de la delegaci&oacute;n de Venezuela; la doctora Elida P&aacute;rraga, Secretaria General del COV; la se&nacute;ora &Eacute;lida Barreto, responsable de acreditaci&oacute;n del COV; la licenciada Magdampi Mar&iacute;n, Coordinadora T&eacute;cnica y Jos&eacute; Rivas, por Mindeporte. Por el Comit&eacute; Organizador de los juegos TO2015, Paola Mora Gerente de Servicios a los CON; Sarah Hardouin Coordinadora de Servicios de Acreditaci&oacute;n y Carole Fuchs Gerente de Inscripci&oacute;n Deportiva.</p>
@@ -80,9 +80,11 @@ Tweet</a>
                 </div>
                 </div>
                 <div>
-                    <span>Galer&iacute;a</span>
-                    <span>Noticias</span>
-                    <span>Eventos</span>
+                    <ul class="nav">
+                        <li><a href="">Galer&iacute;a</a></li>
+                        <li><a href="">Noticias</a></li>
+                        <li><a href="">Eventos</a></li>
+                    </ul>
                 </div>
                 <div class="map">
                         <div class="r9">
@@ -170,9 +172,9 @@ Tweet</a>
                     <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
-                <div class="videos">
+                <div class="videos">                    
                     <iframe id="ytplayer" type="text/html" width="289" height="162.5625"
-                    src="https://www.youtube.com/embed/?listType=user_uploads&list=araymoisesramon&theme=light"
+                    src="https://www.youtube.com/embed/?playlist=jPaMeWZ80RI,KY1-ss-z8yI,DhxdGUiH7GE"
                     frameborder="0" allowfullscreen></iframe>
                  </div>
                  <div class="banner">
@@ -187,11 +189,7 @@ Tweet</a>
                         <li class="youtube-b"><a target="_blank"  href=""></a></li>
                     </ul>
                  </div>
-         </div>
-                  <div class="row">
-                     
-                 </div>
-                
+         </div>                
             </div> 
              <div class="row last">
                 <div class="pat-ofic">Patrocinantes Oficiales</div>
@@ -208,14 +206,15 @@ Tweet</a>
                     <div class="clear"></div>
                 </div>
                 <div class="cred">
-                    <p><img src="./img/right.png" alt="Flecha"/> Comit&eacute; Ol&iacute;mpico Venezolano <?= date('Y')?>. Todos los derechos reservados. Desarrollador por: XXX. Imagen ADDOMO.</p>
-                    <div class="right">Siga nuestras redes sociales <img src="./img/right.png" alt="Flecha"/>
+                    <p><img src="./img/right.png" alt="Flecha" style="padding-right: 50px;"/> Comit&eacute; Ol&iacute;mpico Venezolano <?= date('Y')?>. Todos los derechos reservados <img src="./img/sello.png" class="sello" />    Desarrollado por XXX imagen: ADDOMO</p>
+                    <div class="right">siga nuestras redes <img src="./img/right.png" alt="Flecha" style="padding-right: 20px;"/>
                         <ul>
                             <li><a target="_blank"  href="https://twitter.com/officialCOV"><img src="./img/twitter_hover.png" alt="Twitter"/></a></li>
                             <li><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"><img src="./img/facebook_hover.png" alt="Facebook"/></a></li>
                             <li><a  target="_blank" href="http://instagram.com/covofficial"><img src="./img/instagram_hover.png" alt="Instagram"/></a></li>
-                            <li><img src="./img/youtube_hover.png" alt="Facebook"/></li>
-                        </ul>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCm7DUK_V4KB-NNvxYVrTWyg"><img src="./img/youtube_hover.png" alt="Facebook"/></a></li>
+                        </ul>                   
+                        <img src="./img/right.png" alt="Flecha" class="up"/>     
                     </div>
                     <div class="clear"></div>
                 </div>

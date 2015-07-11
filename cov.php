@@ -40,7 +40,7 @@
                             <li class="twitter"><a target="_blank"  href="https://twitter.com/officialCOV"></a></li>
                             <li class="facebook"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>     
                             <li class="instagram"><a  target="_blank" href="http://instagram.com/covofficial"></a></li>        
-                            <li class="youtube"><a target="_blank"  href=""></a></li>      
+                            <li class="youtube"><a target="_blank"  href="https://www.youtube.com/channel/UCm7DUK_V4KB-NNvxYVrTWyg"></a></li>      
                     </ul>
                     <ul class="share">
                             <li class="share-icon"><a href=""></a></li>
@@ -161,7 +161,7 @@
          <div class="row">
               <div class="videos">
                     <iframe id="ytplayer" type="text/html" width="576" height="324"
-                    src="https://www.youtube.com/embed/?listType=user_uploads&list=araymoisesramon&theme=light"
+                    src="https://www.youtube.com/embed/?playlist=jPaMeWZ80RI,KY1-ss-z8yI,DhxdGUiH7GE"
                     frameborder="0" allowfullscreen></iframe>
                  </div>
              <div class="galeria"></div>
@@ -261,19 +261,20 @@
                         <li class="rio2016_2"><img src="./img/rio2016_2.png" alt="Rio"/></li>
                         <li class="toronto2015"><img src="./img/toronto2015.png" alt="Rio"/></li>
                         <li class="coi"><img src="./img/coi.png" alt="Rio"/></li>
-                        <li class="solidaridad"><img src="./img/rio2016.png" alt="Rio"/></li>
+                        <li class="solidaridad"><img src="./img/solidaridad.png" alt="Solidaridad"/></li>
                     </ul>
                     <div class="clear"></div>
                 </div>
                 <div class="cred">
-                    <p><img src="./img/right.png" alt="Flecha"/> Comité Olímpico Venezolano <?= date('Y')?>. Todos los derechos reservados. Desarrollador por: XXX. Imagen ADDOMO.</p>
-                    <div class="right">Siga nuestras redes sociales <img src="./img/right.png" alt="Flecha"/>
+                    <p><img src="./img/right.png" alt="Flecha" style="padding-right: 50px;"/> Comit&eacute; Ol&iacute;mpico Venezolano <?= date('Y')?>. Todos los derechos reservados <img src="./img/sello.png" class="sello" />    Desarrollado por XXX imagen: ADDOMO</p>
+                    <div class="right">siga nuestras redes <img src="./img/right.png" alt="Flecha" style="padding-right: 20px;"/>
                         <ul>
                             <li><a target="_blank"  href="https://twitter.com/officialCOV"><img src="./img/twitter_hover.png" alt="Twitter"/></a></li>
                             <li><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"><img src="./img/facebook_hover.png" alt="Facebook"/></a></li>
                             <li><a  target="_blank" href="http://instagram.com/covofficial"><img src="./img/instagram_hover.png" alt="Instagram"/></a></li>
-                            <li><img src="./img/youtube_hover.png" alt="Facebook"/></li>
-                        </ul>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCm7DUK_V4KB-NNvxYVrTWyg"><img src="./img/youtube_hover.png" alt="Facebook"/></a></li>
+                        </ul>                   
+                        <img src="./img/right.png" alt="Flecha" class="up"/>     
                     </div>
                     <div class="clear"></div>
                 </div>
