@@ -12,7 +12,7 @@ class db {
     
     function __construct($setnames=true) {
         $this->dbhost   = '127.0.0.1';
-        $this->dbname   = 'cov';
+        $this->dbname   = 'covoffic_cov';
         $this->dbuser   = 'root';
         $this->dbpass   = 'administrator';
         
