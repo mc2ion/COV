@@ -1,3 +1,11 @@
+<?php 
+include("./common/functions.php");
+
+$id = $_GET["id"];
+$news = getNewsDetail($id);
+$month = getMonthName(strftime("%m", $news["fecha"]));
+$fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -59,19 +67,12 @@
         <div class="container">
             <div class="col large-1">
                 <div class="noticia-img">
-                    <img src="img/noticia-img.png" />
+                    <img src="./admin/<?= $news["path"] ?>" />
                 </div>
                <div class="noticias">
-                    <h1>Inscritos los atletas <span>Venezolanos</span></h1>
-                    <h3>351 atletas, fueron los inscritos para competir en los XVII Juegos Deportivos Panamericanos que se realizar&aacute;n en Toronto del 10 al 26 de julio.</h3>
-                    <p><span>(Prensa Comit&eacute; Ol&iacute;mpico Venezolano. 02 de Julio. Salvador Almea).</span> La delegaci&oacute;n qued&oacute; inscrita con 351 atletas, 196 en masculino y 155 en feminino. El proceso se llev&oacute; a cabo en el Centro de Bienvenida de la Villa de los atletas Panamericanos/para panamericanos CIBC en Toronto, ubicada en: 65 Trinity Street, Toronto,ON. M5A3T1.</p>
-                    <p>En esta reuni&oacute;n donde todo se realiz&oacute; con toda normalidad, estuvieron presentes por Venezuela, el licenciado Arturo Castillo, Jefe de Misi&oacute;n de la delegaci&oacute;n de Venezuela; la doctora Elida P&aacute;rraga, Secretaria General del COV; la se&nacute;ora &Eacute;lida Barreto, responsable de acreditaci&oacute;n del COV; la licenciada Magdampi Mar&iacute;n, Coordinadora T&eacute;cnica y Jos&eacute; Rivas, por Mindeporte. Por el Comit&eacute; Organizador de los juegos TO2015, Paola Mora Gerente de Servicios a los CON; Sarah Hardouin Coordinadora de Servicios de Acreditaci&oacute;n y Carole Fuchs Gerente de Inscripci&oacute;n Deportiva.</p>
-                    <p><span>Los puntos a tratar de esta reuni&oacute;n fueron:</span><br />Inscripciones Deportivas: se revis&oacute; el reporte de Inscripci&oacute;n nominal, para garantizar la participaci&oacute;n de los atletas y sus eventos.</p>
-                    <p><span>Calculadora de Tama&nacute;o estimado de Delegaci&oacute;n:</span> Actualizaci&oacute;n de la Calculadora.</p>
-                    <p><span>Acreditaci&oacute;n:</span> revisi&oacute;n del reporte de privilegios de acceso, para asegurar que se respeten en lineamientos de acreditaci&oacute;n y que los privilegios de accesos de cada delegado u oficial sean correctos revisi&oacute;n de herramientas de Asignaci&oacute;n de Oficiales de equipo, para confirmar las asignaciones ALL - 3 - 1 y las transferencia de Ao.</p>
-                    <p><span>Asignaci&oacute;n:</span> revisi&oacute;n de los espacios asignados al CON en la Villa y Hospedaje Sat&eacute;lite.</p>
-                    <p><span>Servicio a los CON:</span> revisi&oacute;n del cuestionario de la DRM, as&iacute; como tratar cualquier punto de inter&eacute;s.</p>
-                    <p>Adem&aacute;s de los atletas, tambi&eacute;n se realiz&oacute; la inscripci&oacute;n de los oficiales, 1 Jefe de Misi&oacute;n, 3 Subjefes de Misi&oacute;n, 1 Attache Panamericano y 1 Veterinario, se suman a la delegaci&oacute;n de participantes en los Juegos Panamericanos.</p>
+                    <h1><?= $news["titulo"] ?></h1>
+                    <h3><?= $news["subtitulo"] ?></h3>
+                    <?= $news["contenido"] ?>
                     <div class="share-btns">
                     <a class="twitter-share-button"
   href="https://twitter.com/intent/tweet" data-count="none">
@@ -221,5 +222,11 @@ Tweet</a>
              </div>            
         </div>   
     </div>
+    <script>
+        $( document ).ready(function() {
+            var $span = '<span>(<?= $news["fuente"] ?>. <?= $fecha ?>. <?= $news["autor"] ?>).</span>';
+            $(".noticias p:first-of-type").prepend($span);
+        });
+    </script>
   </body>
 </html>

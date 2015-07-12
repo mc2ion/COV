@@ -1,3 +1,9 @@
+<?php 
+include("./common/functions.php");
+
+$news = getLastNews();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -77,38 +83,16 @@
                 <div id="slider1_container" class="noticias-slider" style="position: relative; top: 0px; left: 0px; width: 645px; height: 389px;">
                     <!-- Slides Container -->
                     <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 645px; height: 389px;">
-                        <div class="1">
-                            <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
-                            </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
-                            <img u="image" src="image1.jpg" />
-                        </div>
+                        <?php foreach($news as $k => $v){?>
                         <div>
                             <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
+                                <h2><?= $v["titulo"] ?></h2>
+                                <h3><?= substr(strip_tags($v["contenido"]),0,200)."..." ?></h3>
                             </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
-                            <img u="image" src="image2.jpg" />
-                        </div>
-                        <div>
-                            <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
-                            </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>
-                            <img u="image" src="image3.jpg" />
-                        </div>
-                        <div>
-                            <span class="title">
-                                <h2>Toronto <span>2015</span></h2>
-                                <h3>Juegos Panamericanos Toronto 2015</h3>
-                            </span>
-                            <span class="noti-plus"><a href="#"><img src="img/plus.png" /></a></span>`
-                            <img u="image" src="image4.jpg" />
-                        </div>
+                            <span class="noti-plus"><a href="news.php?id=<?= $v["id"] ?>"><img src="img/plus.png" /></a></span>
+                            <img u="image" src="./admin/<?= $v["path"] ?>" />
+                        </div>                            
+                        <?php } ?>
                     </div>
                     <!-- Arrow Left -->
                     <span u="arrowleft" class="jssora10l" style="top: 123px; left: 8px;">

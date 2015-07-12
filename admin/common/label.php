@@ -9,6 +9,9 @@ $label["fecha_creacion"]   = "Fecha Creación";
 $label["creado_por"]   = "Creado Por";
 $label["contenido"]   = "Contenido";
 $label["accion"]   = "Acción";
+$label["subtitulo"] = "Subtítulo";
+$label["autor"]     = "Autor";
+
 
 
 

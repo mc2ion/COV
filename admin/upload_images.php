@@ -1,10 +1,8 @@
 <?php
 include ("./common/functions.php");
-include ("./common/class-db.php"); $db = new db();
 
 
 if (isset($_POST) && isset($_POST["upload"])){
-    
     extract($_POST);
     $error=array();
     $extension=array("jpeg","jpg","png","gif");
@@ -13,9 +11,9 @@ if (isset($_POST) && isset($_POST["upload"])){
         $file_name  = $_FILES["files"]["name"][$key];
         $file_tmp   = $_FILES["files"]["tmp_name"][$key];
         $ext        = pathinfo($file_name,PATHINFO_EXTENSION);
-        if(in_array($ext,$extension))
+        if(in_array(strtolower($ext),$extension))
         {
-            if(!file_exists("./gallery/".$file_name))
+            if(!file_exists("./gallery/".uniqid().$file_name))
             {
                 move_uploaded_file($file_tmp=$_FILES["files"]["tmp_name"][$key],"gallery/".$file_name);
                 $out["nombre"]          = $file_name;
@@ -23,7 +21,7 @@ if (isset($_POST) && isset($_POST["upload"])){
                 $out["path"]            = "gallery/".$file_name;
                 $out["fecha_creacion"]  = time();
                 $out["creado_por"]      = "1";
-                @$db->dbInsert("images", $out);
+                @$db->dbInsert("imagenes", $out);
             }
             else
             {

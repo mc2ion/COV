@@ -13,7 +13,7 @@ if (isset($_POST) && isset($_POST["submit"])){
         if ($user=="") {$msg = "Por favor, indique su usuario." ; $focus1 = "autofocus"; $focus2 = ""; }
         else if ($password == ""){ $msg = "Por favor, indique su contraseña."; $focus1 = ""; $focus2 = "autofocus";}
     }else{
-        $query = "SELECT * from cov.usuarios WHERE (correo = '$user' OR usuario = '$user') AND contrasena = '$password' ";
+        $query = "SELECT * from usuarios WHERE (correo = '$user' OR usuario = '$user') AND contrasena = '$password' ";
         $q = $db->dbQuery($query);
         if ($q){
             setcookie("cov-user-logged-in", "1", time() + 86400, "/");

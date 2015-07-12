@@ -110,9 +110,9 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .user-icon{z-index:2;}
 .noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 0;}
 .body { margin-top: 70px; width: 100%; padding: 0;}
-.noticia-img { float: left; background-color: rgb(202, 202, 202); width: 876px; height: 389px;  margin: 0 0 10px;}
-.noticia-img img { width: 876px; height: 389px; }
-.title { height: 140px; position: absolute; z-index: 5; background: rgba(0,0,0,0.4); padding: 20px; margin: 20px 0 20px 60px; color: white; } 
+.noticia-img { float: left; background-color: rgba(255, 255, 255, 0.39); text-align: center; border-radius: 10px; width: 876px; height: 389px;  margin: 0 0 10px;}
+.noticia-img img { width: auto; height: 389px; }
+.title { height: 140px; position: absolute; z-index: 5; background: rgba(0,0,0,0.4); padding: 20px; margin: 20px 0 20px 60px; color: white; width: 487px; } 
 .title h2 { font-family: "SkolaRegular", Verdana, Tahoma; }
 .title h2 span { font-family: "SkolaBlack", Verdana, Tahoma; }
 .title h3 { font-family: "SkolaItalic", Verdana, Tahoma; opacity: 0.7; line-height: 30px;}

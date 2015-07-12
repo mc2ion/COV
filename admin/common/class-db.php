@@ -65,7 +65,8 @@ class db {
 
 
     function dbUpdate($table, $data, $where) {
-        unset($data[Id], $data[id], $data["ID"]);
+        unset($data["Id"], $data["id"], $data["ID"]);
+        $qr = "";
         foreach ($data as $k => $v) {
             $value = $v;
             $value = addslashes($value);
@@ -73,7 +74,7 @@ class db {
         }
 
         $qr = substr($qr, 0, -1);
-        $query = "Update $table set $qr where $where limit 1";
+       echo  $query = "Update $table set $qr where $where limit 1";
 
        $result =  mysql_query($query, $this->conn);
        return $result;
