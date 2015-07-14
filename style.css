@@ -97,8 +97,8 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: #07AEE5;  z-index
 nav{ text-align: right;}
 .actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); *//* padding: 5px; */padding-right: 0;}
 .wrapper-news .actions { padding-bottom: 10px }
-.container{width: 100%; max-width: 1200px; margin: 0 auto;}
-.menu {width: 100%; max-width: 690px; float: right;}
+.container{width: 96%; max-width: 1200px; margin: 2% auto;}
+.menu {width: 70%; max-width: 690px; float: right;}
 .menu li {display: inline-block; list-style-type: none;margin-bottom: 10px;}
 .menu li  a{ text-decoration: none; color: white; display: inline-block; background: #07AEE5; width: 130px; text-align: center; padding: 8px 0px;
 border-radius: 5px; -moz-border-radius:5px; -webkit-border-radius:5px; transition: background 0.5s ease;}
@@ -110,7 +110,7 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .user-icon{z-index:2;}
 .noticias-slider { float: left;    background-color: rgb(202, 202, 202);    width: 645px;    height: 389px;    margin-top: 0;}
 .body { margin-top: 70px; width: 100%; padding: 0;}
-.noticia-img { float: left; background-color: rgba(255, 255, 255, 0.39); text-align: center; border-radius: 10px; width: 876px; height: 389px;  margin: 0 0 10px;}
+.noticia-img { float: left; background-color: rgba(255, 255, 255, 0.39); text-align: center; border-radius: 10px; max-width: 876px; height: 389px;  margin: 0 0 10px; width: 100%;}
 .noticia-img img { width: auto; height: 389px; }
 .title { height: 140px; position: absolute; z-index: 5; background: rgba(0,0,0,0.4); padding: 20px; margin: 20px 0 20px 60px; color: white; width: 487px; } 
 .title h2 { font-family: "SkolaRegular", Verdana, Tahoma; }
@@ -119,8 +119,8 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .noti-plus { z-index: 5; position: absolute; bottom: 20px; right: 20px; }
 .twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 0; }
 .wrapper-news .twitter-box { width: 289px; background-color: #F2F2F2; border: 1px solid #F2F2F2; margin-left: 3px; margin-bottom: 30px;}
-.noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;height: 201px;position: relative;z-index: 2;position: relative;}
-.wrapper-news .noticias { max-width: 836px; min-height: 775px; margin-bottom: 20px; }
+.noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;position: relative;z-index: 2;position: relative;}
+.wrapper-news .noticias { max-width: 836px; margin-bottom: 20px; width: 100%; box-sizing: border-box;}
 .wrapper-news .noticias h1 { color: #057dc1; font-family: "SkolaRegularItalic"; font-size: 45px; margin-bottom: 10px; }
 .wrapper-news .noticias h1 span { font-family: "SkolaBlack"; }
 .wrapper-news .noticias h3 { color: #057dc1; font-family: "SkolaItalic"; font-size: 19px; padding: 0 0 20px; }
@@ -134,12 +134,12 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .plus{text-align: right;margin: 0;position: absolute;bottom: 20px;right: 20px;}
 .jugador{width: 420px;  margin-top: -30px;}
 .jug{position: absolute; right:0; margin-top: 0;z-index: 0;}
-.logo img{width: 250px;margin-top: 0;}
+.logo img{width: 100%;margin-top: 0;max-width: 280px;}
 ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
 #search {  background: url("./img/search.png") no-repeat scroll 0 0 transparent;   color: #000000;  cursor: pointer;   height: 20px;   padding: 0;   width: 20px;   color: transparent;   margin-left: 5px; }
 .wrapper-news #search { background: url("./img/search-blue.png") no-repeat scroll 0 0 transparent; background-size: 20px 20px;}
 .banner{  padding: 0;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
-.banner img { border-radius: 10px; box-shadow: 0px 0px 10px rgb(199, 198, 198); }
+.banner img { border-radius: 10px; box-shadow: 0px 0px 10px rgb(199, 198, 198); width: 100%;}
 .wrapper-news .banner { width: 300px; height: 300px; display: inline-block; padding: 0; background: none; }
 .wrapper-news .banner img { width: 260px; height: auto; }
 .redes span {color: white;  font-size: 22px; font-family:"SkolaRegular", Verdana, Tahoma; }
@@ -152,8 +152,8 @@ ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
 .up { -ms-transform: rotate(270deg); -webkit-transform: rotate(270deg); transform: rotate(270deg); }
 .row{ margin: 0 0 60px; clear: both;} 
 .col { float: left; }
-.large-1 { width: 75%; max-width: 900px; }
-.large-2 { width: 25%; max-width: 300px; }
+.large-1 { width: 70%; max-width: 900px; }
+.large-2 { width: 30%; max-width: 300px; }
 ul.social-bottom {    padding: 0;    margin-top: 15px;}
 .social-bottom li {    margin: 0 4px;}
 .map {color:white;background-color: rgba(255, 255, 255, 0.2);padding: 8px 8px 0;}
@@ -185,7 +185,7 @@ ul.social-bottom {    padding: 0;    margin-top: 15px;}
 .pat-loc ul {text-align: left;}
 div.right{  float: right;  margin-right: 5px;}
 .header {
-    padding-top: 25px;
+    padding-top: 1px;
     padding-bottom: 0;
 }
 .twitter-box h1 {
@@ -201,4 +201,7 @@ div.right{  float: right;  margin-right: 5px;}
 .twitter-box h1 img{ vertical-align: middle; height: 25px;}
 .noticias p {
     line-height: 22px;
+}
+.logo {
+    width: 30%;
 }

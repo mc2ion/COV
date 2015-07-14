@@ -79,6 +79,7 @@ $fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
 Tweet</a>
                     <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
                 </div>
+                <div style="clear: both;"></div>
                 </div>
                 <div>
                     <ul class="nav">
