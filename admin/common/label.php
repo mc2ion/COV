@@ -11,9 +11,11 @@ $label["contenido"]   = "Contenido";
 $label["accion"]   = "Acción";
 $label["subtitulo"] = "Subtítulo";
 $label["autor"]     = "Autor";
-
-
-
+$label["nombre"]    = "Nombre";
+$label["apellido"]  = "Apellido";
+$label["usuario"]   = "Usuario";
+$label["correo"]    = "Correo";
+$label["admin"]     = "Usuario Administrador";
 
 
 

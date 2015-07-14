@@ -3,7 +3,7 @@
 -- Server version:               5.1.56-community - MySQL Community Server (GPL)
 -- Server OS:                    Win64
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-07-12 17:47:16
+-- Date/time:                    2015-07-13 22:19:10
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `noticias` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
--- Dumping data for table covoffic_cov.noticias: ~5 rows (approximately)
+-- Dumping data for table covoffic_cov.noticias: ~6 rows (approximately)
 DELETE FROM `noticias`;
 /*!40000 ALTER TABLE `noticias` DISABLE KEYS */;
 INSERT INTO `noticias` (`id`, `titulo`, `subtitulo`, `fuente`, `fecha`, `autor`, `contenido`, `imagen`, `fecha_creacion`, `creado_por`, `fecha_edicion`, `editado_por`, `fecha_borrado`, `borrado_por`, `borrado`) VALUES
@@ -81,15 +81,18 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `usuario` varchar(250) DEFAULT NULL,
   `correo` varchar(250) DEFAULT NULL,
   `contrasena` varchar(500) DEFAULT NULL,
-  `activo` int(11) DEFAULT '1',
+  `admin` int(11) DEFAULT NULL,
+  `borrado` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table covoffic_cov.usuarios: 1 rows
+-- Dumping data for table covoffic_cov.usuarios: 2 rows
 DELETE FROM `usuarios`;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `usuario`, `correo`, `contrasena`, `activo`) VALUES
-	(1, 'Marion', 'Carambula', 'mc2ion', NULL, '123456', 1);
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `usuario`, `correo`, `contrasena`, `admin`, `borrado`) VALUES
+	(1, 'Marion', 'Carambula', 'mc2ion', 'mc2.ions@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
+	(2, 'Administrador', 'General', 'admin', 'rrmedinach@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
+	(3, 'Yeilimar', 'Viloria', 'yviloria', 'yei.vilo3@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 0, 0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 /*!40014 SET FOREIGN_KEY_CHECKS=1 */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

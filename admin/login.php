@@ -7,7 +7,7 @@ $user       = "";
 $password   = "";
 if (isset($_POST) && isset($_POST["submit"])){
     $user       = $db->clean($_POST["user"]);
-    $password   = $db->clean($_POST["password"]);
+    $password   = md5($db->clean($_POST["password"]));
     
     if (!$user || !$password){
         if ($user=="") {$msg = "Por favor, indique su usuario." ; $focus1 = "autofocus"; $focus2 = ""; }
@@ -18,6 +18,8 @@ if (isset($_POST) && isset($_POST["submit"])){
         if ($q){
             setcookie("cov-user-logged-in", "1", time() + 86400, "/");
             setcookie("cov-user-id", $q[1]["id"], time() + 86400, "/");
+            setcookie("cov-user-admin", $q[1]["admin"], time() + 86400, "/");
+            setcookie("cov-user-name", $q[1]["nombre"], time() + 86400, "/");
             header("Location: ./index.php");
             exit();
         }else{
