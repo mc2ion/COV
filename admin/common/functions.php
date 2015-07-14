@@ -37,6 +37,8 @@ function menu($selected=""){
         <div class="admin">Administrador</div>
         <div class="logo"><img src="../img/logo.png" alt="Logo" /></div>
         <ul>';
+        $sel  = ''; if ($selected == "usuarios") $sel = "class='selected'";
+        $out .= '<li><a href="./users.php" '.$sel.'>Usuarios</a></li>';
         $sel  = ''; if ($selected == "imagenes") $sel = "class='selected'";
         $out .= '<li><a href="./images.php" '.$sel.'>Imágenes</a></li>';
         $sel  = ''; if ($selected == "noticias") $sel = "class='selected'";
