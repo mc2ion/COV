@@ -89,3 +89,6 @@ form.login label {
 .suc{color: green;
   background-color: rgb(228, 255, 228);
   margin-top: 20px;}
+.err{color: red;
+  background-color: rgb(255, 230, 230);
+  margin-top: 20px;}

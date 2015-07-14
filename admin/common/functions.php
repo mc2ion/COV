@@ -39,8 +39,6 @@ function menu($selected=""){
         <ul>';
         $sel  = ''; if ($selected == "imagenes") $sel = "class='selected'";
         $out .= '<li><a href="./images.php" '.$sel.'>Imágenes</a></li>';
-        $sel  = ''; if ($selected == "videos") $sel = "class='selected'";
-        $out .= '<li><a href="./videos.php" '.$sel.'>Vídeos</a></li>';
         $sel  = ''; if ($selected == "noticias") $sel = "class='selected'";
         $out .= '<li><a href="./news.php" '.$sel.'>Noticias</a></li>';
         $sel  = ''; if ($selected == "jugadores") $sel = "class='selected'";
@@ -48,6 +46,30 @@ function menu($selected=""){
         </ul>
     </div>';
     return $out;      
+}
+
+function uploadImage($path, $input){
+    $format_accepted = array("png", "jpg", "jpeg");
+    $uploadOk["result"] = 1;
+    $target_file = $path;
+    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+    // Verificar el formato
+    if(!in_array(strtolower($imageFileType), $format_accepted)) 
+    {
+        $uploadOk["result"] = 0;
+        $uploadOk["message"] = "Formato de la imagen no válido. Formatos aceptados: .png, .jpg y .jpeg";
+    }
+    // Varificar algun error
+    if ($uploadOk["result"] != 0) {
+        if (move_uploaded_file($_FILES[$input]["tmp_name"], $target_file)) {
+            $uploadOk["result"] = 1;
+        } else {
+            $uploadOk["result"]  = 0;
+            $uploadOk["message"] = "Error al cargar imagen";
+        }
+    }
+    return $uploadOk;    
+    
 }
 
 if (isset($_GET["logout"])){

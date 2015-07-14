@@ -112,13 +112,13 @@ $news = getLastNews();
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
                 <div class="actions">
-                     <div class="posiciones sq"><a href=""></a></div>
+                     <div class="posiciones sq"><a href="http://results.toronto2015.org/IRS/es/general/multimedallistas.htm" target="_blank"></a></div>
                      <div class="olimpismo sq"><a href=""></a></div>
                      <div class="oficiales sq"><a href=""></a></div>
                      <div class="boletin"><a href=""></a></div>
                      <div class="media"><a href=""></a></div>
-                     <div class="calendario"><a href=""></a></div>
-                     <div class="toronto"><a href=""></a></div>
+                     <div class="calendario"><a href="http://results.toronto2015.org/IRS/es/general/horario-general.htm" target="_blank"></a></div>
+                     <div class="toronto"><a href="http://results.toronto2015.org/IRS/es/general/conteo-de-medallas.htm" target="_blank"></a></div>
                      <div class="contacto"><a href=""></a></div>
                      <div class="ubicanos"><a href=""></a></div>
                 </div>
@@ -132,7 +132,7 @@ $news = getLastNews();
              </div>
              <div class="atletas">
                 <div class="toronto_atletas"><a href=""></a></div>
-                 <div class="punto_olimpico"><a href=""></a></div>
+                 <div class="punto_olimpico"><a target="_blank" href="http://www.puntoolimpico.com.ve"></a></div>
              </div>
              <div class="jug">
                 <img src="./img/jugador.png" class="jugador"/>
@@ -140,7 +140,7 @@ $news = getLastNews();
          <div class="clear"></div>
          </div>
          <div class="row">
-             <div class="banner">Publicidad</div>
+             <div class="banner"><img src="./img/banner-publicidad.jpg"/></div>
          </div>
          <div class="row">
               <div class="videos">

@@ -17,6 +17,7 @@ if (isset($_POST) && isset($_POST["submit"])){
         $q = $db->dbQuery($query);
         if ($q){
             setcookie("cov-user-logged-in", "1", time() + 86400, "/");
+            setcookie("cov-user-id", $q[1]["id"], time() + 86400, "/");
             header("Location: ./index.php");
             exit();
         }else{

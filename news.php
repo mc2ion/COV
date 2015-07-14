@@ -158,13 +158,13 @@ Tweet</a>
             </div> 
             <div class="col large-2">
                 <div class="actions">
-                     <div class="posiciones sq"><a href=""></a></div>
+                     <div class="posiciones sq"><a href="http://results.toronto2015.org/IRS/es/general/multimedallistas.htm" target="_blank"></a></div>
                      <div class="olimpismo sq"><a href=""></a></div>
                      <div class="oficiales sq"><a href=""></a></div>
                      <div class="boletin"><a href=""></a></div>
                      <div class="media"><a href=""></a></div>
-                     <div class="calendario"><a href=""></a></div>
-                     <div class="toronto"><a href=""></a></div>
+                     <div class="calendario"><a href="http://results.toronto2015.org/IRS/es/general/horario-general.htm" target="_blank"></a></div>
+                     <div class="toronto"><a href="http://results.toronto2015.org/IRS/es/general/conteo-de-medallas.htm" target="_blank"></a></div>
                      <div class="contacto"><a href=""></a></div>
                      <div class="ubicanos"><a href=""></a></div>
                 </div>
