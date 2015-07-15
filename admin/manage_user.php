@@ -4,6 +4,9 @@ include ("./common/functions.php");
 $errorNombre = ""; $errorApellido = ""; $errorUsuario = ""; $errorCorreo = ""; $errorContrasena = ""; $errorContrasena2 = ""; $errorTipo = "";
 $out["nombre"] = "";  $out["apellido"] = "";  $out["usuario"] = "";  $out["correo"] = ""; $out["contrasena"] = ""; $out["admin"] = "";
 $action = "crear"; $message = "";
+$title           = "Agregar Usuario";
+
+
 if (isset($_POST["crear"]) || isset($_POST["editar"]) ){
     $out["nombre"]      = $_POST["firstname"];
     $out["apellido"]    = $_POST["lastname"];
@@ -17,29 +20,30 @@ if (isset($_POST["crear"]) || isset($_POST["editar"]) ){
     if ($out["apellido"] == "")  $errorApellido       = "Por favor, ingrese el apellido del usuario.";
     if ($out["usuario"] == "") $errorUsuario      = "Por favor, ingrese el usuario.";
     if ($out["correo"] == "")  $errorCorreo = "Por favor, ingrese el correo del usuario.";
-    if ($out["contrasena"] == "")  $errorContrasena       = "Por favor, ingrese una contrase�a.";
-    if ($rContrasena == "")  $errorContrasena2       = "Por favor, repita su contrase�a.";
-    if ($rContrasena != $out["contrasena"])  $errorContrasena       = "Sus contrase�as no coinciden.";
+    if ($out["contrasena"] == "")  $errorContrasena       = "Por favor, ingrese una contraseña.";
+    if ($rContrasena == "")  $errorContrasena2       = "Por favor, repita su contraseña.";
+    if ($rContrasena != $out["contrasena"])  $errorContrasena       = "Sus contraseñas no coinciden.";
     
-    if ($out["nombre"] &&  $out["apellido"] && $out["usuario"] && $out["correo"] && $out["contrasena"]){
+    if ($out["nombre"] &&  $out["apellido"] && $out["usuario"] && $out["correo"]){
         if (isset($_POST["crear"])){
-            $id = @$db->dbInsert("usuarios", $out);
+            if ($out["contrasena"]){
+                $id = @$db->dbInsert("usuarios", $out);
+                if ($id>0){
+                    $_SESSION["message-s"] = "El usuario fue creado exitosamente.";
+                    header("Location: ./users.php");
+                    exit();
+                }else{
+                    $message = "Ha ocurrido un error creando el usuario. Por favor intente más tarde.";
+                }
+            }
+        }else{
+            $id = @$db->dbUpdate("usuarios", $out, 'id = "'.$db->clean($_GET["id"]).'"');
             if ($id>0){
-                $_SESSION["message-s"] = "El usuario fue creado exitosamente.";
+                $_SESSION["message-s"] = "El usuario fue editado exitosamente.";
                 header("Location: ./users.php");
                 exit();
             }else{
-                $message = "Ha ocurrido un error creando el usuario. Por favor intente m�s tarde.";
-            }
-            
-        }else{
-            $id = @$db->dbUpdate("noticias", $out, 'id = "'.$db->clean($_GET["id"]).'"');
-            if ($id>0){
-                $_SESSION["message-s"] = "El usuario fue editado exitosamente.";
-                header("Location: ./news.php");
-                exit();
-            }else{
-                $message = "Ha ocurrido un error editando el usuario. Por favor intente m�s tarde.";
+                $message = "Ha ocurrido un error editando el usuario. Por favor intente más tarde.";
             }
             
         }
@@ -60,22 +64,27 @@ if(isset($_POST["eliminar"])){
         header("Location: ./news.php");
         exit();
     }else{
-        $message = "Ha ocurrido un error eliminado la noticia. Por favor intente m�s tarde.";
+        $message = "Ha ocurrido un error eliminado la noticia. Por favor intente más tarde.";
     }
 }
 
 if (isset($_GET["id"])){
     $action = "editar";
     $id = $db->clean($_GET["id"]);
-    $query = "SELECT * from noticias WHERE id = '$id'";
+    $query = "SELECT * from usuarios WHERE id = '$id'";
     $q = $db->dbQuery($query);
-    $out["titulo"] = $q[1]["titulo"];
-    $out["fecha"]  = date('d-m-Y', $q[1]["fecha"]);
-    $out["fuente"]  = $q[1]["fuente"];
-    $out["contenido"]  = $q[1]["contenido"];
-    $out["subtitulo"]  = $q[1]["subtitulo"];
-    $out["autor"]   = $q[1]["autor"];
-    $out["imagen"]  = $q[1]["imagen"];
+    $out["nombre"]   = $q[1]["nombre"];
+    $out["apellido"] = $q[1]["apellido"];
+    $out["usuario"]  = $q[1]["usuario"];
+    $out["correo"]   = $q[1]["correo"];
+    $out["admin"]    = $q[1]["admin"];
+    $title           = "Editar Usuario";
+    
+}
+
+if (isset($_SESSION["message-s"])){
+    $messageS = $_SESSION["message-s"];
+    unset($_SESSION["message-s"]);
 }
 
 ?>
@@ -92,11 +101,19 @@ if (isset($_GET["id"])){
   </head>
   <body>
     <?= top_bar(); ?>
-    <?= menu("noticias"); ?>
+    <?= menu("usuarios"); ?>
     <div class="content">
-        <div class="title">Agregar Usuario</div>
+        <div class="title"><?= $title?></div>
+      
         <div class="err"><?= $message?></div>
+        <div class="suc"><?= $messageS?></div>
         <div class="add-content">
+           
+           <?php if ($action == "editar"){?>
+                <div class="pass">
+                <a href="./manage_user_pass.php?id=<?=$_GET["id"]?>" class="cpass">Cambiar contraseña</a>
+                </div>
+            <?php }?>
             <form method="post">
                 <fieldset>
                     <p><label>Nombre:</label>
@@ -111,27 +128,33 @@ if (isset($_GET["id"])){
                         <input type="text" name="username" value="<?= $out["usuario"]?>"/>
                         <span class="error"><?= $errorUsuario?></span>
                     </p>
-                    <p><label>Correo Electr�nico:</label>
+                    <p><label>Correo Electrónico:</label>
                         <input type="email" name="email" value="<?= $out["correo"]?>"/>
                         <span class="error"><?= $errorCorreo?></span>
                     </p>
-                    <p><label>Contrase�a:</label>
+                    <?php if ($action == "crear"){?>
+                    <p><label>Contraseña:</label>
                         <input type="password" name="contrasena" value=""/>
                         <span class="error"><?= $errorContrasena?></span>
                     </p>
-                    <p><label>Repetir Contrase�a:</label>
+                    <p><label>Repetir Contraseña:</label>
                         <input type="password" name="contrasena2" value=""/>
                         <span class="error"><?= $errorContrasena2?></span>
                     </p>
+                    <?php }?>
                     <p><label>Tipo:</label>
                         <select name="type">
-                            <option value="1">Administrador</option>
-                            <option value="0">Usuario</option>
+                            <option value="1" <?=($out["admin"] == "1") ? "selected":""?>>Administrador</option>
+                            <option value="0" <?=($out["admin"] == "0") ? "selected":""?>>Usuario</option>
                         </select>
                         <span class="error"><?= $errorTipo?></span>
                     </p>
                     
-                    <p class="buttons"><label></label><input type="submit" name="<?= $action ?>" value="Guardar"/> <input type="submit" name="eliminar" value="Eliminar"/></p>
+                    <p class="buttons">
+                        <input type="submit" name="<?= $action ?>" value="Guardar"/> 
+                        <input type="submit" name="eliminar" value="Eliminar"/>
+                        <a href="./users.php" class="back">Volver</a>
+                    </p>
                 </fieldset>
             </form>
         </div>
