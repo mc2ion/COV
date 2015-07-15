@@ -3,7 +3,7 @@ include ("./common/functions.php");
 
 $errorNombre = ""; $errorApellido = ""; $errorUsuario = ""; $errorCorreo = ""; $errorContrasena = ""; $errorContrasena2 = ""; $errorTipo = "";
 $out["nombre"] = "";  $out["apellido"] = "";  $out["usuario"] = "";  $out["correo"] = ""; $out["contrasena"] = ""; $out["admin"] = "";
-$action = "crear"; $message = "";
+$action = "crear"; $message = ""; $messageS = "";
 $title           = "Agregar Usuario";
 
 
@@ -152,7 +152,9 @@ if (isset($_SESSION["message-s"])){
                     
                     <p class="buttons">
                         <input type="submit" name="<?= $action ?>" value="Guardar"/> 
+                        <?php if ($action == "editar") {?>
                         <input type="submit" name="eliminar" value="Eliminar"/>
+                        <?php }?>
                         <a href="./users.php" class="back">Volver</a>
                     </p>
                 </fieldset>
