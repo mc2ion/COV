@@ -48,7 +48,7 @@ if (isset($_POST) && isset($_POST["submit"])){
         <div class="error"><?= $msg ?></div>
         <fieldset>
             <div>
-                <label>Correo electrónico:</label>
+                <label>Correo electrónico o usuario:</label>
                 <input type="text" name="user" value="<?= $user ?>" <?= $focus1?>/>
             </div>
             <div>
