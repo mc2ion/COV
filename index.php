@@ -1,30 +1,44 @@
 <?php 
 include("./common/functions.php");
 
-$id = $_GET["id"];
-$news = getNewsDetail($id);
-$month = getMonthName(strftime("%m", $news["fecha"]));
-$fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
+$news = getLastNews();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Comit&eacute; Ol&iacute;mpico</title>
+    <title>Comité Olímpico</title>
     <link rel="stylesheet" href="css/slider.css"/>
     <link rel="stylesheet" href="style.css"/>
     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jssor.slider.mini.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            var options = { 
+                $AutoPlay: true,
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,
+                    $ChanceToShow: 2,
+                    $SpacingX: 10,
+                    $SpacingY: 10,
+                    $AutoCenter: 1
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,
+                    $ChanceToShow: 2,
+                    $AutoCenter: 2                } 
+            };
+            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            
+            $("div[u='navigator']").children('div').each(function(i){
+                $(this).addClass("background"+i);
+            });
+        });
+    </script>
   </head>
-  <body id="news">
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId=199975960099979";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="wrapper-news">
+  <body>
+    <div class="wrapper">
         <div class="header">
             <div class="container">
                 <div class="top-bar">
@@ -48,13 +62,13 @@ $fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
                 <ul class="menu">
                     <li><a href="">COV</a></li>
                     <li><a href="">JJOO</a></li>
-                    <li><a href="">Ciclo Ol&iacute;mpico</a></li>
+                    <li><a href="">Ciclo Olímpico</a></li>
                     <li><a href="">Disciplinas</a></li>
                     <li><a href="">Atletas</a></li>
                     <li><a href="">Federaciones</a></li>
                     <li><a href="">Fotos</a></li>
                     <li><a href="">Videos</a></li>
-                    <li><a class="current" href="">Noticias</a></li>
+                    <li><a href="news.php">Noticias</a></li>
                 </ul>
             </nav>
             <div class="logo">
@@ -65,30 +79,98 @@ $fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
     </div>   
     <div class="body">
         <div class="container">
-            <div class="col large-1">
-                <div class="noticia-img">
-                    <img src="./admin/<?= $news["path"] ?>" />
+            <div class="row">
+                <div id="slider1_container" class="noticias-slider" style="position: relative; top: 0px; left: 0px; width: 645px; height: 389px;">
+                    <!-- Slides Container -->
+                    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 645px; height: 389px;">
+                        <?php foreach($news as $k => $v){?>
+                        <div>
+                            <span class="title">
+                                <h2><?= $v["titulo"] ?></h2>
+                                <h3><?= substr(strip_tags($v["contenido"]),0,200)."..." ?></h3>
+                            </span>
+                            <span class="noti-plus"><a href="news.php?id=<?= $v["id"] ?>"><img src="img/plus.png" /></a></span>
+                            <img u="image" src="./admin/<?= $v["path"] ?>" />
+                        </div>                            
+                        <?php } ?>
+                    </div>
+                    <!-- Arrow Left -->
+                    <span u="arrowleft" class="jssora10l" style="top: 123px; left: 8px;">
+                    </span>
+                    <!-- Arrow Right -->
+                    <span u="arrowright" class="jssora10r" style="top: 123px; right: 8px;">
+                    </span>
+                    <!-- bullet navigator container -->
+                    <div u="navigator" class="jssorb01" style="bottom: 16px; right: 10px;">
+                        <!-- bullet navigator item prototype -->
+                        <div u="prototype"></div>
+                    </div>
                 </div>
+                <div class="twitter-box">   
+                    <h1>Twitter <img src="./img/twitter_hover.png" alt="Twitter" style="vertical-align: middle;"/></h1>
+                    <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                <div class="actions">
+                     <div class="posiciones sq"><a href="http://results.toronto2015.org/IRS/es/general/multimedallistas.htm" target="_blank"></a></div>
+                     <div class="olimpismo sq"><a href=""></a></div>
+                     <div class="oficiales sq"><a href=""></a></div>
+                     <div class="boletin"><a href=""></a></div>
+                     <div class="media"><a href=""></a></div>
+                     <div class="calendario"><a href="http://results.toronto2015.org/IRS/es/general/horario-general.htm" target="_blank"></a></div>
+                     <div class="toronto"><a href="http://results.toronto2015.org/IRS/es/general/conteo-de-medallas.htm" target="_blank"></a></div>
+                     <div class="contacto"><a href=""></a></div>
+                     <div class="ubicanos"><a href=""></a></div>
+                </div>
+                <div class="clear"></div>
+            </div> 
+            <div class="row">
                <div class="noticias">
-                    <h1><?=$news["titulo"] ?></h1>
-                    <h3><?=$news["subtitulo"] ?></h3>
-                    <?= $news["contenido"] ?>
-                    <div class="share-btns">
-                    <a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet" data-count="none">
-Tweet</a>
-                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
-                </div>
-                <div style="clear: both;"></div>
-                </div>
-                <div>
-                    <ul class="nav">
-                        <li><a href="">Galer&iacute;a</a></li>
-                        <li><a href="">Noticias</a></li>
-                        <li><a href="">Eventos</a></li>
-                    </ul>
-                </div>
-                <div class="map">
+                    <h1>Noticias</h1>
+                    <div class="table">
+                        <?php foreach($news as $k => $v){?>
+                        <div class="row">
+                            <h3><?= $v["titulo"] ?></h3>
+                            <div><a href="news.php?id=<?= $v["id"] ?>"><img src='./img/plus.png'/></a></div>
+                        </div>                            
+                        <?php } ?>
+                    </div>
+             </div>
+             <div class="atletas">
+                <div class="toronto_atletas"><a href=""></a></div>
+                 <div class="punto_olimpico"><a target="_blank" href="http://www.puntoolimpico.com.ve"></a></div>
+             </div>
+             <div class="jug">
+                <img src="./img/jugador.png" class="jugador"/>
+             </div> 
+         <div class="clear"></div>
+         </div>
+         <div class="row">
+             <div class="banner"><img src="./img/banner-publicidad.jpg"/></div>
+         </div>
+         <div class="row">
+              <div class="videos">
+                    <iframe id="ytplayer" type="text/html" width="576" height="324"
+                    src="https://www.youtube.com/embed/?playlist=jPaMeWZ80RI,KY1-ss-z8yI,DhxdGUiH7GE"
+                    frameborder="0" allowfullscreen></iframe>
+                 </div>
+             <div class="galeria"></div>
+             <div class="clear"></div>
+         </div>
+         <div class="row">
+             <div class="redes">
+                <span>Redes Sociales</span>
+                <ul class="social-bottom">
+                    <li class="twitter-b"><a  target="_blank" href="https://twitter.com/officialCOV"></a></li>
+                    <li class="facebook-b"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>
+                    <li class="instagram-b"><a target="_blank" href="http://instagram.com/covofficial"></a></li>
+                    <li class="youtube-b"><a target="_blank"  href=""></a></li>
+                </ul>
+             </div>
+             <div class="clear"></div>
+         </div>
+                  <div class="row">
+                     <div class="map">
                         <div class="r9">
                             <span>COV</span>
                             <ul class="map-cov">
@@ -101,12 +183,12 @@ Tweet</a>
                         <div class="r9">
                             <span>JJOO</span>
                             <ul class="map-jjoo">
-                                <li><a href="">Participaci&oacute;n</a></li>
-                                <li><a href="">Ol&iacute;mpicos Juveniles</a></li>
+                                <li><a href="">Participación</a></li>
+                                <li><a href="">Olímpicos Juveniles</a></li>
                             </ul>
                         </div>
                         <div class="r9">
-                            <span>Ciclo Ol&iacute;mpico</span>
+                            <span>Ciclo Olímpico</span>
                             <ul class="map-co">
                                 <li><a href="">Panamericanos</a></li>
                                 <li><a href="">Centroamericanos</a></li>
@@ -118,19 +200,19 @@ Tweet</a>
                             <span>Disciplinas</span>
                             <ul class="disciplinas">
                                 <li><a href="">JJOO</a></li>
-                                <li><a href="">Ciclo Ol&iacute;mpicos</a></li>
+                                <li><a href="">Ciclo Olímpicos</a></li>
                             </ul>
                         </div>
                         <div class="r9">
                             <span>Atletas</span>
                             <ul class="map-atletas">
                                 <li><a href="">Registrados</a></li>
-                                <li><a href="">Participaci&oacute;n Ciclo</a></li>
-                                <li><a href="">Participaci&oacute;n JJOO</a></li>
+                                <li><a href="">Participación Ciclo</a></li>
+                                <li><a href="">Participación JJOO</a></li>
                             </ul>
                         </div>
                         <div class="r9">
-                            <span>Federaci&oacute;n</span>
+                            <span>Federación</span>
                             <ul class="map-federacion">
                                 <li><a href="">Asociadas</a></li>
                             </ul>
@@ -142,7 +224,7 @@ Tweet</a>
                             </ul>
                         </div>
                         <div class="r9">
-                            <span>V&iacute;deos</span>
+                            <span>Vídeos</span>
                             <ul class="map-videos">
                                 <li><a href="">Eventos deportivos</a></li>
                             </ul>
@@ -156,42 +238,8 @@ Tweet</a>
                         </div>
                         <div class="clear"></div>
                      </div>
-            </div> 
-            <div class="col large-2">
-                <div class="actions">
-                     <div class="posiciones sq"><a href="http://results.toronto2015.org/IRS/es/general/multimedallistas.htm" target="_blank"></a></div>
-                     <div class="olimpismo sq"><a href=""></a></div>
-                     <div class="oficiales sq"><a href=""></a></div>
-                     <div class="boletin"><a href=""></a></div>
-                     <div class="media"><a href=""></a></div>
-                     <div class="calendario"><a href="http://results.toronto2015.org/IRS/es/general/horario-general.htm" target="_blank"></a></div>
-                     <div class="toronto"><a href="http://results.toronto2015.org/IRS/es/general/conteo-de-medallas.htm" target="_blank"></a></div>
-                     <div class="contacto"><a href=""></a></div>
-                     <div class="ubicanos"><a href=""></a></div>
-                </div>
-                <div class="twitter-box">   
-                    <h1>Twitter <img src="./img/twitter-news.png" alt="Twitter" style="vertical-align: middle;"/></h1>
-                    <a class="twitter-timeline" href="https://twitter.com/OfficialCOV" data-widget-id="617727791954558976">Tweets por el @OfficialCOV.</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-                <div class="videos">                    
-                    <iframe id="ytplayer" type="text/html" width="289" height="162.5625"
-                    src="https://www.youtube.com/embed/?playlist=jPaMeWZ80RI,KY1-ss-z8yI,DhxdGUiH7GE"
-                    frameborder="0" allowfullscreen></iframe>
                  </div>
-                 <div class="banner">
-                    <img src="img/toronto-banner.png" />
-                 </div>                 
-                 <div class="redes">
-                    <span>Redes Sociales</span>
-                    <ul class="social-bottom">
-                        <li class="twitter-b"><a  target="_blank" href="https://twitter.com/officialCOV"></a></li>
-                        <li class="facebook-b"><a target="_blank" href="https://www.facebook.com/pages/Comit%C3%A9-Ol%C3%ADmpico-Venezolano/489886661036281"></a></li>
-                        <li class="instagram-b"><a target="_blank" href="http://instagram.com/covofficial"></a></li>
-                        <li class="youtube-b"><a target="_blank"  href=""></a></li>
-                    </ul>
-                 </div>
-         </div>                
+                
             </div> 
              <div class="row last">
                 <div class="pat-ofic">Patrocinantes Oficiales</div>
@@ -223,11 +271,5 @@ Tweet</a>
              </div>            
         </div>   
     </div>
-    <script>
-        $( document ).ready(function() {
-            var $span = '<span>(<?=$news["fuente"] ?>. <?= $fecha ?>. <?= utf8_encode($news["autor"]) ?>).</span>';
-            $(".noticias p:first-of-type").prepend($span);
-        });
-    </script>
   </body>
 </html>

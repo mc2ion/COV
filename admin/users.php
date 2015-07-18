@@ -28,7 +28,7 @@ unset($_SESSION["message-s"]);
     <?= top_bar(); ?>
     <?= menu("usuarios"); ?>
     <div class="content">
-        <div class="title">Usuarios <a href="./manage_user.php" class="add">AÃ±adir nuevo</a></div>
+        <div class="title">Usuarios <a href="./manage_user.php" class="add">Añadir nuevo</a></div>
         <div class="suc"><?= $message?></div>
         <?= @$ui->buildTable($out,1,0); ?>
     </div>
