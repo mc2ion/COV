@@ -112,7 +112,7 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .body { margin-top: 70px; width: 100%; padding: 0;}
 .noticia-img { float: left; background-color: rgba(255, 255, 255, 0.39); text-align: center; border-radius: 10px; max-width: 876px; height: 389px;  margin: 0 0 10px; width: 100%;}
 .noticia-img img { width: auto; height: 389px; }
-.title { height: 140px; position: absolute; z-index: 5; background: rgba(0,0,0,0.4); padding: 20px; margin: 20px 0 20px 60px; color: white; width: 487px; } 
+.title { height: auto; position: absolute; z-index: 5; background: rgba(0,0,0,0.4); padding: 20px; margin: 20px 0 20px 60px; color: white; width: 487px; } 
 .title h2 { font-family: "SkolaRegular", Verdana, Tahoma; }
 .title h2 span { font-family: "SkolaBlack", Verdana, Tahoma; }
 .title h3 { font-family: "SkolaItalic", Verdana, Tahoma; opacity: 0.7; line-height: 30px;}
@@ -124,11 +124,11 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .noticias .table .row { display: table-row; line-height: 37px; }
 .noticias .table .row h3 { display: table-cell; width: 95%; color: #4B4D4E; }
 .noticias .table .row div { display: table-cell; width: 5%; }
-.wrapper-news .noticias { max-width: 836px; margin-bottom: 20px; width: 100%; box-sizing: border-box; padding-bottom:100px;}
+.wrapper-news .noticias { max-width: 836px; margin-bottom: 20px; width: 100%; box-sizing: border-box;}
 .wrapper-news .noticias h1 { color: #057dc1; font-family: "SkolaRegularItalic"; font-size: 45px; margin-bottom: 10px; }
 .wrapper-news .noticias h1 span { font-family: "SkolaBlack"; }
 .wrapper-news .noticias h3 { color: #057dc1; font-family: "SkolaItalic"; font-size: 19px; padding: 0 0 20px; }
-.wrapper-news .noticias p { line-height: 22px !important; font-family: "RobotoLight" !important; font-size: 18px !Important; padding-bottom: 0px; }
+.wrapper-news .noticias p { line-height: 22px; font-family: "RobotoLight"; font-size: 18px; padding-bottom: 20px; }
 .wrapper-news .noticias p span { font-family: "RobotoMedium"; color: #057dc1; }
 .wrapper-news ul.nav { padding-bottom: 20px; }
 .wrapper-news ul.nav li { display: inline-block; width: 30%; height: 150px; background-color: rgba(0,0,0,.1); margin-right: 29px; line-height: 150px; text-align: center; border-radius: 10px; }
