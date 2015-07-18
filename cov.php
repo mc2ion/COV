@@ -127,8 +127,14 @@ $news = getLastNews();
             <div class="row">
                <div class="noticias">
                     <h1>Noticias</h1>
-                    <p>Aquí irían las noticias más importantes con una pequeña descripción.</p>
-                    <p class="plus"><img src='./img/plus.png'/></p>
+                    <div class="table">
+                        <?php foreach($news as $k => $v){?>
+                        <div class="row">
+                            <h3><?= $v["titulo"] ?></h3>
+                            <div><a href="news.php?id=<?= $v["id"] ?>"><img src='./img/plus.png'/></a></div>
+                        </div>                            
+                        <?php } ?>
+                    </div>
              </div>
              <div class="atletas">
                 <div class="toronto_atletas"><a href=""></a></div>
