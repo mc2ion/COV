@@ -24,7 +24,7 @@ function top_bar(){
     return 
 '<div class="top-bar">
         <div class="user-info">
-            Bienvenido, '.$_COOKIE["cov-user-name"].' <a href="./?logout" class="logout">(Salir)</a>
+            Bienvenido, '.$_COOKIE["cov-user-name"].' <a href="./manage_user_pass.php?id='.$_COOKIE["cov-user-id"].'&own=1" class="logout">Cambiar Contraseña</a> <a href="./?logout" class="logout">Salir</a>
         </div>
     </div>';
   

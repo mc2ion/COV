@@ -152,7 +152,7 @@ if (isset($_SESSION["message-s"])){
                     
                     <p class="buttons">
                         <input type="submit" name="<?= $action ?>" value="Guardar"/> 
-                        <?php if ($action == "editar") {?>
+                        <?php if ($action == "editar" && $_GET["id"] != $_COOKIE["cov-user-id"]) {?>
                         <input type="submit" name="eliminar" value="Eliminar"/>
                         <?php }?>
                         <a href="./users.php" class="back">Volver</a>

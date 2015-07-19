@@ -4,6 +4,7 @@ include ("./common/functions.php");
 $errorNombre = ""; $errorApellido = ""; $errorUsuario = ""; $errorCorreo = ""; $errorContrasena = ""; $errorContrasena2 = ""; $errorTipo = "";
 $out["contrasena"] = ""; 
 $message = "";
+$messageS = "";
 
 
 if (isset($_POST["editar"]) ){
@@ -16,9 +17,10 @@ if (isset($_POST["editar"]) ){
     if ($out["contrasena"]){
         $id = @$db->dbUpdate("usuarios", $out, 'id = "'.$db->clean($_GET["id"]).'"');
         if ($id>0){
-            $_SESSION["message-s"] = "La contreseña fue editada exitosamente.";
+            /*$_SESSION["message-s"] = "La contreseña fue editada exitosamente.";
             header("Location: ./manage_user.php?id={$_GET["id"]}");
-            exit();
+            exit();*/
+            $messageS = "La contreseña fue editada exitosamente.";
         }else{
             $message = "Ha ocurrido un error editando la contraseña. Por favor intente más tarde.";
         }
@@ -43,9 +45,22 @@ if (isset($_GET["id"])){
   </head>
   <body>
     <?= top_bar(); ?>
+    <?php
+    if(!isset($_GET["own"])){
+    ?>
     <?= menu("usuarios"); ?>
+    <?php
+    } else {
+    ?>
+    <?= menu(""); ?>
+    <?php    
+    }
+    ?>
     <div class="content">
         <div class="title"><?= $title?></div>
+      
+        <div class="err"><?= $message?></div>
+        <div class="suc"><?= $messageS?></div>
         <div class="add-content">
            <form method="post">
                 <fieldset>
@@ -59,7 +74,13 @@ if (isset($_GET["id"])){
                     </p>
                     <p class="buttons">
                         <input type="submit" name="editar" value="Guardar"/> 
+                        <?php
+                        if(!isset($_GET["own"])){
+                        ?>
                         <a href="./manage_user.php?id=<?=$_GET["id"]?>" class="back">Volver</a>
+                        <?php
+                        }
+                        ?>
                     </p>
                 </fieldset>
             </form>

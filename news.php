@@ -70,8 +70,8 @@ $fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
                     <img src="./admin/<?= $news["path"] ?>" />
                 </div>
                <div class="noticias">
-                    <h1><?= utf8_encode($news["titulo"]) ?></h1>
-                    <h3><?= utf8_encode($news["subtitulo"]) ?></h3>
+                    <h1><?=$news["titulo"] ?></h1>
+                    <h3><?=$news["subtitulo"] ?></h3>
                     <?= $news["contenido"] ?>
                     <div class="share-btns">
                     <a class="twitter-share-button"
@@ -225,7 +225,7 @@ Tweet</a>
     </div>
     <script>
         $( document ).ready(function() {
-            var $span = '<span>(<?= utf8_encode($news["fuente"]) ?>. <?= $fecha ?>. <?= utf8_encode($news["autor"]) ?>).</span>';
+            var $span = '<span>(<?=$news["fuente"] ?>. <?= $fecha ?>. <?= utf8_encode($news["autor"]) ?>).</span>';
             $(".noticias p:first-of-type").prepend($span);
         });
     </script>

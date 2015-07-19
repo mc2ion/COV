@@ -6,9 +6,7 @@ include ("./common/verify_login.php");
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <title>Cómito Olímpico</title>
-    <link rel="stylesheet" href="./css/style.css"/>
+    <?= my_header()?>
   </head>
   <body>
     <?= top_bar(); ?>

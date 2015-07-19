@@ -90,7 +90,7 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: #07AEE5;  z-index
 .contacto a{background:url('./img/contacto.png?v=02'); background-repeat: no-repeat; width: 188px; height: 90px; display: inline-block; float: left;/* margin-top: 10px; */margin: 0px 5px;}
 .ubicanos a{background:url('./img/ubicanos.png?v=02'); background-repeat: no-repeat; width: 90px; height: 90px; display: inline-block; float: left;/* margin-top: 10px; */margin: 0px 5px;}
 .toronto a{background:url('./img/toronto.png?v=02'); background-repeat: no-repeat; width: 188px; height: 90px; display: inline-block; float: left;/* margin-top: 10px; */margin: 10px 5px;}
-.toronto_atletas a{background:url('./img/toronto_atletas.png?v=03'); background-repeat: no-repeat; width: 250px; height: 188px; display: inline-block; margin-top: 0px;/* margin: 0px 20px; */}
+.toronto_atletas a{background:url('./img/toronto_atletas.png?v=04'); background-repeat: no-repeat; width: 250px; height: 188px; display: inline-block; margin-top: 0px;/* margin: 0px 20px; */}
 .punto_olimpico a{background: url('./img/punto_olimpico.png?v=03'); background-repeat: no-repeat; width: 250px; height: 43px; display: inline-block; margin-top: 10px;/* margin: 10px 5px; */}
 .sq a { margin: 0px 5px; width: 90px; height: 90px;}
 .atletas{float: left;margin: 0px 20px;z-index: 2;position: relative;}
@@ -124,11 +124,11 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .noticias .table .row { display: table-row; line-height: 37px; }
 .noticias .table .row h3 { display: table-cell; width: 95%; color: #4B4D4E; }
 .noticias .table .row div { display: table-cell; width: 5%; }
-.wrapper-news .noticias { max-width: 836px; margin-bottom: 20px; width: 100%; box-sizing: border-box;}
+.wrapper-news .noticias { max-width: 836px; margin-bottom: 20px; width: 100%; box-sizing: border-box; padding-bottom:100px;}
 .wrapper-news .noticias h1 { color: #057dc1; font-family: "SkolaRegularItalic"; font-size: 45px; margin-bottom: 10px; }
 .wrapper-news .noticias h1 span { font-family: "SkolaBlack"; }
 .wrapper-news .noticias h3 { color: #057dc1; font-family: "SkolaItalic"; font-size: 19px; padding: 0 0 20px; }
-.wrapper-news .noticias p { line-height: 22px; font-family: "RobotoLight"; font-size: 18px; padding-bottom: 20px; }
+.wrapper-news .noticias p { line-height: 22px !important; font-family: "RobotoLight" !important; font-size: 18px !Important; padding-bottom: 0px; }
 .wrapper-news .noticias p span { font-family: "RobotoMedium"; color: #057dc1; }
 .wrapper-news ul.nav { padding-bottom: 20px; }
 .wrapper-news ul.nav li { display: inline-block; width: 30%; height: 150px; background-color: rgba(0,0,0,.1); margin-right: 29px; line-height: 150px; text-align: center; border-radius: 10px; }

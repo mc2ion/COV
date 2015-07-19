@@ -53,7 +53,7 @@ class db {
         }
         $fieldList = substr($fieldList, 1);
         $valueList = substr($valueList, 1);
-        echo $query = "Insert Into $tableName ($fieldList) values ($valueList)";
+        $query = "Insert Into $tableName ($fieldList) values ($valueList)";
 
         if (mysql_query($query, $this->conn)) {
             return mysql_insert_id($this->conn);
@@ -74,7 +74,7 @@ class db {
         }
 
         $qr = substr($qr, 0, -1);
-       echo  $query = "Update $table set $qr where $where limit 1";
+       $query = "Update $table set $qr where $where limit 1";
 
        $result =  mysql_query($query, $this->conn);
        return $result;
