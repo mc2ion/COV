@@ -3,7 +3,7 @@ include ("./admin/common/class-db.php"); $db = new db();
 
 function getLastNews(){
     global $db;
-    $query      = "SELECT t1.id, t1.titulo, t1.fecha, t1.fuente, t1.contenido, t1.subtitulo, t1.autor, t1.imagen as path from noticias t1 where t1.borrado = 0 order by t1.id desc limit 4";
+    $query      = "SELECT t1.id, t1.titulo, t1.fecha, t1.fuente, t1.contenido, t1.subtitulo, t1.autor, t1.imagen as path from noticias t1 where t1.borrado = 0 order by t1.id desc limit 6";
     $new        = $db->dbQuery($query);
     
     return $new;

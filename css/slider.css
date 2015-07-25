@@ -20,9 +20,9 @@
     cursor: pointer;
     border: none;
 }
-.jssorb01 div { background-color: gray; }
+.jssorb01 div { background-color: gray; border: 1px solid white; }
 .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
-.jssorb01 .av { background-color: #fff !important; }
+.jssorb01 .av { background-color: #fff !important; border: 1px solid white; }
 .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
 
 /* jssor slider arrow navigator skin 10 css */
@@ -51,7 +51,8 @@
 .jssora10l.jssora10ldn { background-position: -256px -39px; }
 .jssora10r.jssora10rdn { background-position: -316px -39px; }
 
-.background0 { background-color: #f5c115 !important; }
-.background1 { background-color: #057dc1 !important; }
-.background2 { background-color: #039047 !important; }
-.background3 { background-color: #d82a27 !important; }
+.background0, .background5 { background-color: #057dc1 !important; }
+.background1 { background-color: #f5c115 !important; }
+.background2 { background-color: #000000 !important; }
+.background3 { background-color: #039047 !important; }
+.background4 { background-color: #d82a27 !important; }
