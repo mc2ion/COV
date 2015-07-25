@@ -8,7 +8,7 @@ body{ background: white;}
 .menu li a.selected{ background: rgb(0, 131, 185);}
 .logo { margin-top: 0px; background-color: rgb(241, 241, 241); padding: 10px 0px;  text-align: center;}
 .admin {color:white; text-align: center; padding: 15px 0px;}
-.top-bar{width: 100%; background-color: black; padding: 8px 0px; color: white; text-align: right; font-size: 12px;margin-right: 0px;position: fixed;}
+.top-bar{width: 100%; background-color: black; padding: 8px 0px; color: white; text-align: right; font-size: 12px;margin-right: 0px;position: fixed; z-index: 1000;}
 .logout {color: rgb(244, 192, 32);margin-right: 10px;}
 .content {margin-left: 250px;padding: 30px;padding-top: 60px;}
 .title {    font-size: 26px;}
@@ -18,9 +18,9 @@ a.add { font-size: 13px;  background-color: #E0E0E0; text-decoration: none;
 a.add:hover{background: #0083B9; color: white;}
 fieldset {   border: none; }
 label{display: block;  width: 200px; vertical-align: top;margin-bottom: 3px;}
-.add-content p {margin: 10px 0px;}
+.add-content p {margin: 10px 0px;position: relative;}
 .add-content textarea { padding: 5px; width: 290px;height: 200px; resize: none;}
-.add-content input, .add-content select {padding: 5px; width: 100%; box-sizing: border-box;}
+.add-content input, .add-content select {padding: 5px; width: 100%; box-sizing: border-box;position: relative;}
 .add-content {margin-top: 20px;  border: 1px solid rgb(202, 202, 202);  border-radius: 5px;  padding: 10px;background-color: rgb(243, 243, 243);max-width: 600px;}
 .add-content #subtitulo { padding: 0; width: 100%; height: 100px; }
 .add-content .buttons input { float: left; width: 50%;}
@@ -105,3 +105,8 @@ a.cpass {
     font-size: 13px;
 }
 .pass {text-align: right;}
+img.ui-datepicker-trigger {
+  position: absolute;
+  right: 4px;
+  top: 23px;
+}

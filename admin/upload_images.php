@@ -20,8 +20,16 @@ if (isset($_POST) && isset($_POST["upload"])){
                 $out["ext"]             = $ext;
                 $out["path"]            = "gallery/".$file_name;
                 $out["fecha_creacion"]  = time();
-                $out["creado_por"]      = "1";
-                @$db->dbInsert("imagenes", $out);
+                $out["creado_por"]      = $_COOKIE["cov-user-id"];
+                $id = @$db->dbInsert("imagenes", $out);
+                
+                if ($id>0){
+                    $_SESSION["message-s"] = "La imagen fue cargada exitosamente.";
+                    header("Location: ./images.php");
+                    exit();
+                }else{
+                    $message = "Ha ocurrido un error cargando la imagen. Por favor intente más tarde.";
+                }
             }
             else
             {
@@ -50,15 +58,15 @@ if (isset($_POST) && isset($_POST["upload"])){
     <div class="content">
         <div class="title">Cargar Imágenes</div>
         <div class="add-content">
-            <form method="post" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
+            <form method="post" enctype="multipart/form-data" id="my-awesome-dropzone">
                 <fieldset>
                     <p><label>Imagen:</label><input type="file" name="files[]" multiple /></p>
-                    <p><label></label><input type="submit" name="upload" value="Cargar"/></p>
+                    <p class="buttons">
+                        <input type="submit" name="upload" value="Guardar"/>
+                        <a href="./images.php" class="back">Volver</a>
+                    </p>
                 </fieldset>
             </form>
-        </div>
-        <div class="add-content center">
-            <a href="./images.php">Volver a listado</a>
         </div>
     </div>
   </body>

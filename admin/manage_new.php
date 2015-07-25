@@ -5,9 +5,11 @@ $errorTitulo = ""; $errorFecha = ""; $errorFuente  = ""; $errorImagen = "";  $er
 $out["titulo"] = "";  $out["fecha"] = ""; $out["fuente"] = ""; $out["imagen"] = ""; $out["contenido"] = "";
 $out["subtitulo"] = ""; $out["autor"] = "";
 $action = "crear"; $message = "";
+$title  = "Agregar Noticia";
+
 if (isset($_POST["crear"]) || isset($_POST["editar"]) ){
     $out["titulo"]      = $_POST["title"];
-    $out["fecha"]       = strtotime($_POST["date"]);
+    $out["fecha"]       = strtotime(str_replace('/' , '.' , $_POST["date"]));
     $out["fuente"]      = $_POST["source"];
     $out["contenido"]   = $_POST["description"];
     $out["subtitulo"]   = $_POST["subtitulo"];
@@ -90,12 +92,13 @@ if (isset($_GET["id"])){
     $query = "SELECT * from noticias WHERE id = '$id'";
     $q = $db->dbQuery($query);
     $out["titulo"] = $q[1]["titulo"];
-    $out["fecha"]  = date('d-m-Y', $q[1]["fecha"]);
+    $out["fecha"]  = date('d/m/Y', $q[1]["fecha"]);
     $out["fuente"]  = $q[1]["fuente"];
     $out["contenido"]  = $q[1]["contenido"];
     $out["subtitulo"]  = $q[1]["subtitulo"];
     $out["autor"]   = $q[1]["autor"];
     $out["imagen"]  = $q[1]["imagen"];
+    $title           = "Editar Noticia";
 }
 
 ?>
@@ -114,7 +117,7 @@ if (isset($_GET["id"])){
     <?= top_bar(); ?>
     <?= menu("noticias"); ?>
     <div class="content">
-        <div class="title">Agregar Noticia</div>
+        <div class="title"><?= $title?></div>
         <div class="err"><?= $message?></div>
         <div class="add-content">
             <form method="post" enctype="multipart/form-data">
@@ -131,7 +134,7 @@ if (isset($_GET["id"])){
                         <span class="error"><?= $errorFuente?></span>
                     </p>
                     <p><label>Fecha:</label>
-                        <input type="text" name="date" value="<?= $out["fecha"]?>"/>
+                        <input type="text" class="datepicker" name="date" value="<?= $out["fecha"]?>" autocomplete="off"/>
                         <span class="error"><?= $errorFecha?></span>
                     </p>
                     <p><label>Autor:</label>

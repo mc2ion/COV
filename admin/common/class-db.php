@@ -74,7 +74,7 @@ class db {
         }
 
         $qr = substr($qr, 0, -1);
-       $query = "Update $table set $qr where $where limit 1";
+        $query = "Update $table set $qr where $where limit 1";
 
        $result =  mysql_query($query, $this->conn);
        return $result;

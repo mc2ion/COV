@@ -11,7 +11,11 @@ $out =
     <meta charset="utf-8"/>
     <title>Comité Olímpico</title>
     <link rel="stylesheet" href="./css/style.css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="../js/jquery-ui.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/common.js"></script>
+  
 EOT;
 
 if ($upload != ""){
