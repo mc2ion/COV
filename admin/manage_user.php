@@ -53,18 +53,15 @@ if (isset($_POST["crear"]) || isset($_POST["editar"]) ){
 if(isset($_POST["eliminar"])){
     unset($out);
     $out["borrado"] = 1;
-    $out["borrado_por"] = $_COOKIE["cov-user-id"];
-    $out["fecha_borrado"] = time();
-    $id = $db->dbUpdate("noticias", $out, 'id = "'.$db->clean($_GET["id"]).'"');
+    /*$out["borrado_por"] = $_COOKIE["cov-user-id"];
+    $out["fecha_borrado"] = time();*/
+    $id = $db->dbUpdate("usuarios", $out, 'id = "'.$db->clean($_GET["id"]).'"');
     if ($id>0){
-        if($_POST["path"]!=""){
-            unlink($_POST["path"]);
-        }
-        $_SESSION["message-s"] = "La noticia fue eliminada exitosamente.";
-        header("Location: ./news.php");
+        $_SESSION["message-s"] = "El usuario fue eliminado exitosamente.";
+        header("Location: ./users.php");
         exit();
     }else{
-        $message = "Ha ocurrido un error eliminado la noticia. Por favor intente más tarde.";
+        $message = "Ha ocurrido un error eliminado el usuario. Por favor intente más tarde.";
     }
 }
 
