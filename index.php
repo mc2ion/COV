@@ -72,7 +72,9 @@ $news = getLastNews();
                 </ul>
             </nav>
             <div class="logo">
-                <img src="./img/logo.png"/>
+                <a href="index.php">
+                    <img src="./img/logo.png"/>
+                </a>
             </div>
         </div> 
         <div class="clear"></div>

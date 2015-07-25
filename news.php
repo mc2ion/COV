@@ -58,7 +58,9 @@ $fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
                 </ul>
             </nav>
             <div class="logo">
-                <img src="./img/logo.png"/>
+                <a href="index.php">
+                    <img src="./img/logo.png"/>
+                </a>
             </div>
         </div> 
         <div class="clear"></div>
