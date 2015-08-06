@@ -1,7 +1,8 @@
 <?php 
 include("./common/functions.php");
 
-$news = getLastNews();
+$slidernews = getLastNews();
+$news = getOtherNews();
 
 ?>
 <!DOCTYPE html>
@@ -85,7 +86,7 @@ $news = getLastNews();
                 <div id="slider1_container" class="noticias-slider" style="position: relative; top: 0px; left: 0px; width: 645px; height: 389px;">
                     <!-- Slides Container -->
                     <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 645px; height: 389px;">
-                        <?php foreach($news as $k => $v){?>
+                        <?php foreach($slidernews as $k => $v){?>
                         <div>
                             <span class="title">
                                 <h2><?= $v["titulo"] ?></h2>
