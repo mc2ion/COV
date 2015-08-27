@@ -90,7 +90,6 @@ $news = getOtherNews();
                         <div>
                             <span class="title">
                                 <h2><?= $v["titulo"] ?></h2>
-                                <h3><?= substr(strip_tags($v["contenido"]),0,200)."..." ?></h3>
                             </span>
                             <span class="noti-plus"><a href="news.php?id=<?= $v["id"] ?>"><img src="img/plus.png" /></a></span>
                             <img u="image" src="./admin/<?= $v["path"] ?>" />
