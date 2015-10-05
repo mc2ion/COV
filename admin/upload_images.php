@@ -1,5 +1,6 @@
 <?php
 include ("./common/functions.php");
+include ("./verify_login.php");
 
 
 if (isset($_POST) && isset($_POST["upload"])){

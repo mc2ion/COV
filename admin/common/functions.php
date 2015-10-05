@@ -81,7 +81,7 @@ function uploadImage($path, $input){
 if (isset($_GET["logout"])){
      setcookie("cov-user-logged-in", "0", time() + 86400, "/");
      session_destroy();
-     header("Location: ./index.php");
+     header("Location: ./login.php");
      exit();
 }
 

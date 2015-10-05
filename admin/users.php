@@ -1,5 +1,6 @@
 <?php
 include ("./common/functions.php");
+include ("./verify_login.php");
 
 $query      = "SELECT u.id, u.nombre, u.apellido, u.usuario, u.correo, u.admin from usuarios u where u.borrado = 0";
 $new        = $db->dbQuery($query);

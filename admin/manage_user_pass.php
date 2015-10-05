@@ -1,5 +1,6 @@
 <?php
 include ("./common/functions.php");
+include ("./verify_login.php");
 
 $errorNombre = ""; $errorApellido = ""; $errorUsuario = ""; $errorCorreo = ""; $errorContrasena = ""; $errorContrasena2 = ""; $errorTipo = "";
 $out["contrasena"] = ""; 

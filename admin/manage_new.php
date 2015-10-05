@@ -1,5 +1,6 @@
 <?php
 include ("./common/functions.php");
+include ("./verify_login.php");
 
 $errorTitulo = ""; $errorFecha = ""; $errorFuente  = ""; $errorImagen = "";  $errorDescripcion = ""; $errorAutor = "";
 $out["titulo"] = "";  $out["fecha"] = ""; $out["fuente"] = ""; $out["imagen"] = ""; $out["contenido"] = "";
