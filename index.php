@@ -31,6 +31,7 @@ $news = getOtherNews();
                     $AutoCenter: 2                } 
             };
             var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+            var jssor_slider2 = new $JssorSlider$('slider2_container', options);
             
             $("div[u='navigator']").children('div').each(function(i){
                 $(this).addClass("background"+i);
@@ -61,7 +62,7 @@ $news = getOtherNews();
                 </div>
             <nav>
                 <ul class="menu">
-                    <li><a href="">COV</a></li>
+                    <li><a href="who.php">COV</a></li>
                     <li><a href="">JJOO</a></li>
                     <li><a href="">Ciclo Olímpico</a></li>
                     <li><a href="">Disciplinas</a></li>
@@ -147,8 +148,32 @@ $news = getOtherNews();
              </div> 
          <div class="clear"></div>
          </div>
-         <div class="row">
-             <div class="banner"><img src="./img/banner-publicidad.jpg"/></div>
+         <div class="row">             
+            <div id="slider2_container" class="banner" style="position: relative; top: 0px; left: 0px; width: 1200px; height: 348px;">
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1200px; height: 348px;">
+                    <div>
+                        <img u="image" src="./img/banner-publicidad-1.jpg" />
+                    </div>
+                    <div>
+                        <img u="image" src="./img/banner-publicidad-2.jpg" />
+                    </div>
+                    <div>
+                        <img u="image" src="./img/banner-publicidad-3.jpg" />
+                    </div>
+                </div>
+                <!-- Arrow Left -->
+                <span u="arrowleft" class="jssora10l" style="top: 123px; left: 8px;">
+                </span>
+                <!-- Arrow Right -->
+                <span u="arrowright" class="jssora10r" style="top: 123px; right: 8px;">
+                </span>
+                <!-- bullet navigator container -->
+                <div u="navigator" class="jssorb01" style="bottom: 16px; right: 10px;">
+                    <!-- bullet navigator item prototype -->
+                    <div u="prototype"></div>
+                </div>
+            </div>
          </div>
          <div class="row">
               <div class="videos">

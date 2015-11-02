@@ -46,7 +46,7 @@ $fecha = strftime("%d de ".$month." de %Y", $news["fecha"]);
                 </div>
             <nav>
                 <ul class="menu">
-                    <li><a href="">COV</a></li>
+                    <li><a href="who.php">COV</a></li>
                     <li><a href="">JJOO</a></li>
                     <li><a href="">Ciclo Ol&iacute;mpico</a></li>
                     <li><a href="">Disciplinas</a></li>
