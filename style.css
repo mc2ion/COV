@@ -46,6 +46,8 @@
 body{ font-family: "SkolaMedium", Verdana, Tahoma; background: #07AEE5;  z-index: 0; padding: 0px; margin: 0px;  margin-bottom: 5px;}
 .top-bar{text-align: right;padding-bottom: 18px;}
 .wrapper{background: white  url('./img/background.png'); background-size: 100%; background-repeat: no-repeat;}
+.wrapper-who{background: white url('./img/background-who.png'); background-size: 100%; background-repeat: no-repeat;}
+.wrapper-who .team .member img {margin: 0 25px 50px 50px;}
 .wrapper-news{background: white  url('./img/background-news.png'); background-size: 100%; background-repeat: no-repeat;}
 .twitter a{background:url('./img/twitter.png?v=03'); background-repeat: no-repeat; width: 32px; height: 32px;}
 .share-icon a{background:url('./img/share.png'); background-repeat: no-repeat; width: 43px; height: 43px;}
@@ -95,7 +97,7 @@ body{ font-family: "SkolaMedium", Verdana, Tahoma; background: #07AEE5;  z-index
 .sq a { margin: 0px 5px; width: 90px; height: 90px;}
 .atletas{float: left;margin: 0px 20px;z-index: 2;position: relative;}
 nav{ text-align: right;}
-.actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); *//* padding: 5px; */padding-right: 0;}
+.actions {float:right; max-width: 300px; width: 100%;/* margin-top: 30px; *//* margin-right: -10px; *//* background-color: rgb(255, 237, 182); */padding: 5px; padding-right: 0;}
 .wrapper-news .actions { padding-bottom: 10px }
 .container{width: 96%; max-width: 1200px; margin: 2% auto;}
 .menu {width: 70%; max-width: 690px; float: right;}
@@ -118,7 +120,7 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .title h3 { font-family: "SkolaItalic", Verdana, Tahoma; opacity: 0.7; line-height: 30px;}
 .noti-plus { z-index: 5; position: absolute; bottom: 20px; right: 20px; }
 .twitter-box{    float: left;     width: 216px;    height: 389px;   background-color: #F7C324;   margin-left: 25px;   border-radius: 10px;   border: 1px solid rgb(248, 221, 138);     margin-top: 0; }
-.wrapper-news .twitter-box { width: 289px; background-color: #F2F2F2; border: 1px solid #F2F2F2; margin-left: 3px; margin-bottom: 30px;}
+.wrapper-news .twitter-box, .wrapper-who .twitter-box { width: 289px; background-color: #F2F2F2; border: 1px solid #F2F2F2; margin-left: 3px; margin-bottom: 30px;}
 .noticias{float: left; width: 100%; max-width: 560px;  background-color: rgba(255, 255, 255, 0.39);  padding: 20px;  border-radius: 10px;  font-family: "SkolaRegular", Verdana, Tahoma;position: relative;z-index: 2;position: relative;}
 .noticias .table { width:100%; display: table; }
 .noticias .table .row { display: table-row; line-height: 37px; }
@@ -130,10 +132,10 @@ span.username {  background-color: #E2E6EB; padding: 5px 10px;  width: 156px; di
 .wrapper-news .noticias h3 { color: #057dc1; font-family: "SkolaItalic"; font-size: 19px; padding: 0 0 20px; }
 .wrapper-news .noticias p { line-height: 22px !important; font-family: "RobotoLight" !important; font-size: 18px !Important; padding-bottom: 0px; }
 .wrapper-news .noticias p span { font-family: "RobotoMedium"; color: #057dc1; }
-.wrapper-news ul.nav { padding-bottom: 20px; }
-.wrapper-news ul.nav li { display: inline-block; width: 30%; height: 150px; background-color: rgba(0,0,0,.1); margin-right: 29px; line-height: 150px; text-align: center; border-radius: 10px; }
-.wrapper-news ul.nav li:last-child { margin-right: 0; }
-.wrapper-news ul.nav li a { font-family: "SkolaBold"; text-decoration: none; color: #057dc1; font-size: 20px; }
+.wrapper-news ul.nav, .wrapper-who ul.nav { padding-bottom: 20px; }
+.wrapper-news ul.nav li, .wrapper-who ul.nav li { display: inline-block; width: 30%; height: 150px; background-color: rgba(0,0,0,.1); margin-right: 29px; line-height: 150px; text-align: center; border-radius: 10px; }
+.wrapper-news ul.nav li:last-child, .wrapper-who ul.nav li:last-child { margin-right: 0; }
+.wrapper-news ul.nav li a, .wrapper-who ul.nav li a { font-family: "SkolaBold"; text-decoration: none; color: #057dc1; font-size: 20px; }
 .noticias h1 { color:#0B7DBF; font-style: italic; font-size: 24px; margin-bottom: 10px;}
 .plus{text-align: right;margin: 0;position: absolute;bottom: 20px;right: 20px;}
 .jugador{width: 420px;  margin-top: -30px;}
@@ -145,13 +147,14 @@ ul.social {    top: -5px;     position: relative;     margin-right: 30px;}
 .banner{  padding: 0;  text-align: center;  background-color: rgba(255, 255, 255, 0.47);  border-radius: 10px;  color: rgb(11, 125, 191);}
 .banner img { border-radius: 10px; box-shadow: 0px 0px 10px rgb(199, 198, 198); width: 100%;}
 .wrapper-news .banner { width: 300px; height: 300px; display: inline-block; padding: 0; background: none; }
+.wrapper-who .banner { width: 300px; height: 300px; display: inline-block; padding: 0; background: white; }
 .wrapper-news .banner img { width: 260px; height: auto; }
 .redes span {color: white;  font-size: 22px; font-family:"SkolaRegular", Verdana, Tahoma; }
 .wrapper-news .redes span { color: #B3B3B3; width: 300px; }
 .redes {  text-align: center;  float: right;  margin-bottom: 10px;  margin-top: 20px;}
 .videos, .galeria {  width: 48%;  height: 324px;   background-color: rgba(255, 255, 255, 0.52);   float: left;  border-radius: 10px;  -webkit-border-radius: 10px;  -moz-border-radius: 10px;}
 .videos { margin-right: 4%; }
-.wrapper-news .videos { margin-left: 3px; margin-bottom: 60px; width: 289px; height: 162.5625px; }
+.wrapper-news .videos, .wrapper-who .videos { margin-left: 3px; margin-bottom: 60px; width: 289px; height: 162.5625px; }
 .sello { width: 21px; height: auto;   padding: 0 20px 0 10px; }
 .up { -ms-transform: rotate(270deg); -webkit-transform: rotate(270deg); transform: rotate(270deg); }
 .row{ margin: 0 0 60px; clear: both;} 
